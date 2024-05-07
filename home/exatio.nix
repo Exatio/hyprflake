@@ -41,13 +41,18 @@
   catppuccin.flavour = "macchiato";
 
   # User Directories
-  xdg.userDirs =  {
+  xdg = {
     enable = true;
-    createDirectories = true;
-  };
 
-  # Catppuccin theming
-  xdg.enable = true;
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+
+    mimeApps = {
+      enable = true;
+    };
+  };
 
   # Enable home-manager
   programs.home-manager.enable = true;
