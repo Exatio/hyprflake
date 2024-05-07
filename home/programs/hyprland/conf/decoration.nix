@@ -1,0 +1,40 @@
+# -----------------------------------------------------
+# General window decoration
+# -----------------------------------------------------
+{
+
+  wayland.windowManager.hyprland.settings = {
+
+    decoration = {
+      rounding = 10;
+      blur = {
+          enabled = true;
+          size = 10;
+          passes = 3;
+          ignore_opacity = true;
+          xray = true;
+      };
+      active_opacity = 0.9;
+      inactive_opacity = 0.8;
+      fullscreen_opacity = 1.0;
+
+      dim_inactive = true;
+      dim_strength = 0.1;
+
+      drop_shadow = true;
+      shadow_range = 5;
+      shadow_render_power = 3;
+      "col.shadow" = "rgba(1a1a1aee)";
+
+    };
+
+    # TODO check
+
+    # blurls = waybar
+    # blurls = wofi
+
+    # layerrule = blur, waybar
+    # layerrule = blur, wofi
+  };
+
+}

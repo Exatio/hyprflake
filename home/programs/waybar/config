@@ -1,0 +1,39 @@
+
+{
+	"include": "~/.config/waybar/modules",
+	"layer": "top",
+	//"mode": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"position": "top",
+	"spacing": 5,
+	"fixed-center": false,
+	"ipc": true,
+	"margin-top": 0,
+	//"margin-bottom": 5,
+		
+	"modules-left": [
+			"clock",
+			"custom/separator#dot-line",
+			"custom/weather"
+			// "custom/separator#dot-line",
+			// "hyprland/window"
+	],
+	  
+	"modules-center": ["hyprland/workspaces"], 
+		
+	"modules-right": [
+			"tray",
+			"custom/separator#dot-line",
+			"pulseaudio",
+			"custom/separator#dot-line",
+			"pulseaudio#microphone",
+			"custom/separator#dot-line",
+			"backlight", 
+			"custom/separator#dot-line",		
+			"battery", 
+			"custom/separator#dot-line",
+			"custom/power"
+	],
+
+}
