@@ -12,6 +12,15 @@
     };
   };
 
+  home.file.".emacs".source = ./emacs/.emacs;
+
+  home.file.".emacs.rc".source = ./emacs/.emacs.rc;
+  home.file.".emacs.rc".recursive = true;
+
+  home.file.".emacs.snippets".source = ./emacs/.emacs.snippets;
+  home.file.".emacs.snippets".recursive = true;
+  
+
   home.packages = with pkgs; [
     vim
     neovim
