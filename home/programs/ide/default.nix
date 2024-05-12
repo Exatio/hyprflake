@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-
   # Emacs Daemon
   services.emacs = {
     enable = true;
@@ -16,6 +15,7 @@
   home.packages = with pkgs; [
     vim
     neovim
+    vscodium
   ] ++ (with pkgs.emacsPackages; [
 
   ]);
