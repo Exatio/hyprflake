@@ -36,9 +36,9 @@
 
     windowrulev2 = [
       "workspace 2, class:^(Obsidian)$"
-      "workspace 6 silent, class:^(VencordDesktop)$"
+      "workspace 6 silent, class:^(vesktop)$"
 
-      "opacity 0.9 0.7, class:^(chromium)$"
+      "opacity 0.9 0.7, class:^(floorp)$"
       "opacity 0.9 0.7, class:^(thunar)$"
     ];
 

@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
   # Emacs Daemon
   services.emacs = {
     enable = true;
@@ -8,7 +9,11 @@
     startWithUserSession = true;
     client = {
       enable = true;
-      arguments = [ "-F" ];
+      arguments = [
+         "-c"
+         "-F \"'(fullscreen . fullboth)\""
+         "-a \"${pkgs.emacs}/bin/emacs -fs\"" 
+      ];
     };
   };
 
@@ -25,6 +30,13 @@
     vim
     neovim
     vscodium
+
+    (pkgs.nerdfonts.override {
+      fonts = [
+        "Iosevka"
+      ];
+    })
+
   ] ++ (with pkgs.emacsPackages; [
 
   ]);

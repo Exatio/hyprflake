@@ -42,13 +42,16 @@
         "$scripts/random_wallpaper.sh &"
 
         # Prevents swayidle from locking computer when not afk (audio running)
-        "sway-audio-idle-inhibit"
+        "sway-audio-idle-inhibit &"
 
         # Deepin Polkit
-        "${pkgs.deepin.dde-polkit-agent}/lib/polkit-1-dde/dde-polkit-agent"
+        "${pkgs.deepin.dde-polkit-agent}/lib/polkit-1-dde/dde-polkit-agent &"
 
         # Gamma
         "wlsunset -t 4000 -T 6500 -d 900 -S 07:00 -s 19:00 &"
+
+        # Discord at Startup
+        "vesktop &"
       ];
 
     };

@@ -34,6 +34,10 @@
     initExtraFirst = ''
       pfetch
       cat ~/.cache/wal/sequences
+
+      export ALTERNATE_EDITOR=""
+      export EDITOR="${pkgs.emacs}/bin/emacsclient -t"                                    # $EDITOR opens in terminal
+      export VISUAL="${pkgs.emacs}/bin/emacsclient -c -a ${pkgs.emacs}/bin/emacs"         # $VISUAL opens in GUI mode
     '';
 
     initExtra = ''
@@ -51,10 +55,11 @@
       cat = "bat";
       shutdown = "systemctl poweroff";
       fonts = "~/hyprflake/scripts/fonts.sh";
-      rebuild = "sudo nixos-rebuild switch --flake /home/exatio/hyprflake#nixos-laptop";
-      update = "sudo nix flake update /home/exatio/hyprflake#nixos-laptop";
+      rebuild = "sudo nixos-rebuild switch --flake ~/hyprflake#nixos-laptop";
+      update = "sudo nix flake update ~/hyprflake";
       ncg = "nix-collect-garbage -d && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
     };
 
   };
 }
+
