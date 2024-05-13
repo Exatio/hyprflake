@@ -51,10 +51,30 @@
 
     mimeApps = {
       enable = true;
+
+      defaultApplications = {
+        # Images
+        "image/png"="viewnior.desktop";
+        "image/jpg"="viewnior.desktop";
+        "image/jpeg"="viewnior.desktop";
+
+        # Links (browser)
+        "x-scheme-handler/http"="floorp.desktop";
+        "x-scheme-handler/https"="floorp.desktop";
+        "x-scheme-handler/chrome"="floorp.desktop";
+        "text/html"="floorp.desktop";
+        "application/x-extension-htm"="floorp.desktop";
+        "application/x-extension-html"="floorp.desktop";
+        "application/x-extension-shtml"="floorp.desktop";
+        "application/xhtml+xml"="floorp.desktop";
+        "application/x-extension-xhtml"="floorp.desktop";
+        "application/x-extension-xht"="floorp.desktop";
+      };
+
     };
 
     configFile."mimeapps.list".force = true; 
-    
+
   };
 
   # Enable home-manager
