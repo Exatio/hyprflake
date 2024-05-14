@@ -29,6 +29,7 @@
     "$wallpaper" =   "$scripts/wallpaper.sh";
     "$powerMenu" =   "$scripts/power_menu.sh";
     "$emojis" =      "$scripts/emojis.sh";
+    "$bar" =         "$scripts/choose_bar.sh";
 
     # AZERTY keyboards
     "$1" = "ampersand";
@@ -79,6 +80,9 @@
       ## Wallpapers
       "$mainMod SHIFT, W, exec, $rWallpaper"
       "$mainMod CTRL, W, exec, $wallpaper"
+
+      ## Choose status bar
+      "$mainMod CTRL, X, exec, $bar"
 
       ## Clipboard
       "$mainMod, V, exec, $clipboard"
