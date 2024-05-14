@@ -77,7 +77,7 @@
 	},
 
 	"custom/separator#vertical-line": {
-		"format": "|",
+		"format": " | ",
 		"interval": "once",
 		"tooltip": false
 	},

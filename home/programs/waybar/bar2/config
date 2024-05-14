@@ -15,13 +15,18 @@
 	],
 	"modules-right": [
 	  "temperature",
+	  "custom/separator#vertical-line",
 	  "memory",
+	  "custom/separator#vertical-line",
 	  "cpu",
+	  "custom/separator#vertical-line",
 	  "pulseaudio",
+	  "custom/separator#vertical-line",
 	  "battery",
+	  "custom/separator#vertical-line",
 	  "network",
 	  "custom/separator#vertical-line",
-	  "custom/powermenu"
+	  "custom/power"
 	],
 	
 	"hyprland/workspaces": {
@@ -50,7 +55,7 @@
 		// "6": "六",
 		// "7": "七",
 		// "8": "八"
-		}
+	  }
 	}
 	
   }

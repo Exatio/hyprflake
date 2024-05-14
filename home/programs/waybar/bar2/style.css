@@ -1,10 +1,12 @@
+@import '../../../.cache/wal/colors-waybar.css';
+
 * {
     font-family: "Fira Code Nerd Font";
 }
 
 #waybar {
-    background: #171717;
-    color: #fff;
+    background: alpha(@background, 0.4);;
+    color: @foreground;
 }
 
 #clock {
@@ -27,7 +29,7 @@
 }
 
 #workspaces button:hover {
-    background-color: #262626;
+    background-color: alpha(@background, 0.7);;
 }
 
 #workspaces button.active {
