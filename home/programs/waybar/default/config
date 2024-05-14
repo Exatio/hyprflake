@@ -15,6 +15,7 @@
 			"clock",
 			"custom/separator#dot-line",
 			"custom/weather"
+			//"wlr/taskbar"
 			// "custom/separator#dot-line",
 			// "hyprland/window"
 	],

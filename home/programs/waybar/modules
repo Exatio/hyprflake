@@ -57,7 +57,7 @@
 	    "warning": 30,
 	    "critical": 15
 	       },
-	  "format": "{icon}  {capacity}%",
+	  "format": "{icon} {capacity}%",
 	  "format-charging": " {capacity}%",
 	  "format-plugged": "󱘖 {capacity}%",
 	  "format-full": "{icon} Full",
@@ -69,7 +69,7 @@
 	},
 
 	"temperature": {
-		"format": "{icon} {temperatureC}°C ",
+		"format": "{icon} {temperatureC}°C",
 		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		"critical-threshold": 80,
 		"format-icons": [
