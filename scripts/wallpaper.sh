@@ -32,11 +32,10 @@ newwall=$(echo $wallpaper | sed "s|/home/exatio/hyprflake/assets/wallpapers/||g"
 # Set the new wallpaper
 # ----------------------------------------------------- 
 swww img $wallpaper \
-    --transition-bezier .43,1.19,1,.4 \
     --transition-fps=60 \
-    --transition-type="random" \
-    --transition-duration=0.7 \
-    --transition-pos "$( hyprctl cursorpos )"
+    --transition-type="grow" \
+    --transition-pos "0.854, 0.977" \
+    --transition-step 90 \
 
 ~/hyprflake/scripts/status_bar.sh
 cp -f ~/.cache/wal/colors-cava ~/.config/cava/config
