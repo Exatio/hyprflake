@@ -12,8 +12,12 @@
     })
   ];
 
-  home.file.".config/waybar/config".source = ./config;
   home.file.".config/waybar/modules".source = ./modules;
-  home.file.".config/waybar/style.css".source = ./style.css;
 
+  home.file.".config/waybar/default".recursive = true;
+  home.file.".config/waybar/default".source = ./default;
+  
+  home.file.".config/waybar/bar2".recursive = true;
+  home.file.".config/waybar/bar2".source = ./bar2;
+  
 }

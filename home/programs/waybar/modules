@@ -20,8 +20,8 @@
 	},
 
 	"tray": {
-	  "icon-size": 15,
-	  "spacing": 10
+	  "icon-size": 16,
+	  "spacing": 8
 	},
 
 
@@ -71,9 +71,15 @@
 
 
 	"custom/separator#dot-line": {
-	  "format": "",
-	  "interval": "once",
-	  "tooltip": false
+		"format": "",
+		"interval": "once",
+		"tooltip": false
+	},
+
+	"custom/separator#vertical-line": {
+		"format": "|",
+		"interval": "once",
+		"tooltip": false
 	},
 
 
@@ -90,7 +96,6 @@
 	  "max-length": 50,
 	  "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
 	},
-	  	
 
 	"pulseaudio": {
 	  "format": "{icon} {volume}%",
