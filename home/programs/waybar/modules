@@ -44,7 +44,6 @@
 	  "smooth-scrolling-threshold": 1,
 	},
 
-
 	"battery": {
 	  "interval": 60,
 	  "align": 0,
@@ -79,14 +78,14 @@
 			""
 		]
 	},
-	
+
 	"memory": {
-		"format": "󰫗 {}% ",
+		"format": "󰫗 {}%",
 		"tooltip": "false"
 	},
 
 	"cpu": {
-		"format": " {usage}% ",
+		"format": " {usage}%",
 		"tooltip": "false"
 	},
 
