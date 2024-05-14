@@ -69,6 +69,26 @@
 	  "tooltip-format": "{timeTo} {power}w",
 	},
 
+	"temperature": {
+		"format": "{icon} {temperatureC}°C ",
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format-icons": [
+			"",
+			"",
+			""
+		]
+	},
+	
+	"memory": {
+		"format": "󰫗 {}% ",
+		"tooltip": "false"
+	},
+
+	"cpu": {
+		"format": " {usage}% ",
+		"tooltip": "false"
+	},
 
 	"custom/separator#dot-line": {
 		"format": "",

@@ -5,12 +5,12 @@
 }
 
 #waybar {
-    background: alpha(@background, 0.4);;
+    background: alpha(@background, 0.6);;
     color: @foreground;
 }
 
 #clock {
-    color: #fff;
+    padding-left: 4px;
 }
 
 #tray {
@@ -29,7 +29,7 @@
 }
 
 #workspaces button:hover {
-    background-color: alpha(@background, 0.7);;
+    background-color: alpha(@background, 0.9);;
 }
 
 #workspaces button.active {
@@ -37,7 +37,7 @@
 }
 
 #window {
-    color: #fff;    
+    color: @foreground;    
 }
 
 #network {
