@@ -30,7 +30,7 @@
       cool-retro-term
       wget
       unzip
-      obsidian
+      #obsidian
       vlc
       viewnior
       ntfs3g
@@ -38,7 +38,10 @@
   };
 
   # Catppuccin
-  catppuccin.flavour = "macchiato";
+  catppuccin = {
+    flavor = "macchiato";
+    accent = "rosewater";
+  };
 
   # User Directories
   xdg = {

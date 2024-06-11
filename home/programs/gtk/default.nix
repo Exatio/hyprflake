@@ -41,7 +41,7 @@
       cursor = {
         enable = false;
         accent = "teal";
-        flavour = "macchiato";
+        flavor = "macchiato";
       };
     };
 
