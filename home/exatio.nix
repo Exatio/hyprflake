@@ -15,7 +15,7 @@
     homeDirectory = "/home/exatio";
     packages = with pkgs; [
       # Web
-      floorp
+      #floorp
       firefox
       ungoogled-chromium
 
@@ -30,7 +30,7 @@
       cool-retro-term
       wget
       unzip
-      #obsidian
+      obsidian
       vlc
       viewnior
       ntfs3g
