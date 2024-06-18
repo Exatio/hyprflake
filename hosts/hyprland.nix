@@ -4,6 +4,7 @@
     enable = true;
     package = pkgs.hyprland;
     xwayland.enable = true;
+    portalPackage = pkgs.xdg-desktop-portal-hyprland;
   };
 
   services.displayManager.sddm = {
@@ -17,9 +18,11 @@
 
   xdg.portal = {
     enable = true;
+    wlr.enable = false;
+    xdgOpenUsePortal = false;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gtk
     ];
   };
 
