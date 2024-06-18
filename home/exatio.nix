@@ -15,7 +15,7 @@
     homeDirectory = "/home/exatio";
     packages = with pkgs; [
       # Web
-      #floorp
+      floorp
       firefox
       ungoogled-chromium
 
