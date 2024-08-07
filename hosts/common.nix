@@ -29,7 +29,6 @@
         enable = pkgs.lib.mkForce false;
         configurationLimit = 3; # shows only last 3 generations on boot
         memtest86.enable = true;
-
       };
     };
 
