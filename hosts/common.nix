@@ -20,10 +20,24 @@
   };
 
   # Bootloader
-  boot.loader.systemd-boot.enable = /*pkgs.lib.mkForce*/ false;
-  boot.lanzaboote.enable = true;
-  boot.lanzaboote.pkiBundle = "/etc/secureboot";
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      efi.canTouchEfiVariables = true;
+      timeout = 3;
+
+      systemd-boot = {
+        enable = pkgs.lib.mkForce false;
+        configurationLimit = 3; # shows only last 3 generations on boot
+        memtest86.enable = true;
+
+      };
+    };
+
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/etc/secureboot";
+    };
+  };
 
    # For NTFS Support
   boot.supportedFilesystems = [ "ntfs" ];
