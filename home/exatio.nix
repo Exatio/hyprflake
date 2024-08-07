@@ -15,18 +15,20 @@
     homeDirectory = "/home/exatio";
     packages = with pkgs; [
       # Web
-      floorp
       firefox
       ungoogled-chromium
 
       # Discord
+      /*
       (discord.override {
         withOpenASAR = true;
         withVencord = true;
       })
+      */
       vesktop
 
       # Other
+      keepassxc # password manager
       cool-retro-term
       wget
       unzip
@@ -34,6 +36,7 @@
       vlc
       viewnior
       ntfs3g
+      sbctl # create secure boot keys
     ];
   };
 
@@ -62,16 +65,16 @@
         "image/jpeg"="viewnior.desktop";
 
         # Links (browser)
-        "x-scheme-handler/http"="floorp.desktop";
-        "x-scheme-handler/https"="floorp.desktop";
-        "x-scheme-handler/chrome"="floorp.desktop";
-        "text/html"="floorp.desktop";
-        "application/x-extension-htm"="floorp.desktop";
-        "application/x-extension-html"="floorp.desktop";
-        "application/x-extension-shtml"="floorp.desktop";
-        "application/xhtml+xml"="floorp.desktop";
-        "application/x-extension-xhtml"="floorp.desktop";
-        "application/x-extension-xht"="floorp.desktop";
+        "x-scheme-handler/http"="firefox.desktop";
+        "x-scheme-handler/https"="firefox.desktop";
+        "x-scheme-handler/chrome"="firefox.desktop";
+        "text/html"="firefox.desktop";
+        "application/x-extension-htm"="firefox.desktop";
+        "application/x-extension-html"="firefox.desktop";
+        "application/x-extension-shtml"="firefox.desktop";
+        "application/xhtml+xml"="firefox.desktop";
+        "application/x-extension-xhtml"="firefox.desktop";
+        "application/x-extension-xht"="firefox.desktop";
       };
 
     };

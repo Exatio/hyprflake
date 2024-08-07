@@ -20,21 +20,10 @@
   };
 
   # Bootloader
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
-
-    grub = {
-      devices = [ "nodev" ];
-      efiSupport = true;
-      enable = true;
-      useOSProber = true;
-      catppuccin.enable = true;
-    };
-
-  };
+  boot.loader.systemd-boot.enable = /*pkgs.lib.mkForce*/ false;
+  boot.lanzaboote.enable = true;
+  boot.lanzaboote.pkiBundle = "/etc/secureboot";
+  boot.loader.efi.canTouchEfiVariables = true;
 
    # For NTFS Support
   boot.supportedFilesystems = [ "ntfs" ];
