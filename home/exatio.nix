@@ -15,7 +15,7 @@
     homeDirectory = "/home/exatio";
     packages = with pkgs; [
       # Web
-      firefox
+      mullvad-browser
       ungoogled-chromium
 
       # Discord
@@ -65,16 +65,16 @@
         "image/jpeg"="viewnior.desktop";
 
         # Links (browser)
-        "x-scheme-handler/http"="firefox.desktop";
-        "x-scheme-handler/https"="firefox.desktop";
-        "x-scheme-handler/chrome"="firefox.desktop";
-        "text/html"="firefox.desktop";
-        "application/x-extension-htm"="firefox.desktop";
-        "application/x-extension-html"="firefox.desktop";
-        "application/x-extension-shtml"="firefox.desktop";
-        "application/xhtml+xml"="firefox.desktop";
-        "application/x-extension-xhtml"="firefox.desktop";
-        "application/x-extension-xht"="firefox.desktop";
+        "x-scheme-handler/http"="mullvad-browser.desktop";
+        "x-scheme-handler/https"="mullvad-browser.desktop";
+        "x-scheme-handler/chrome"="mullvad-browser.desktop";
+        "text/html"="mullvad-browser.desktop";
+        "application/x-extension-htm"="mullvad-browser.desktop";
+        "application/x-extension-html"="mullvad-browser.desktop";
+        "application/x-extension-shtml"="mullvad-browser.desktop";
+        "application/xhtml+xml"="mullvad-browser.desktop";
+        "application/x-extension-xhtml"="mullvad-browser.desktop";
+        "application/x-extension-xht"="mullvad-browser.desktop";
       };
 
     };

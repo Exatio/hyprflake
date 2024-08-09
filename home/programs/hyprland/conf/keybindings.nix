@@ -12,7 +12,7 @@
     # Apps
     "$fileManager" = "thunar";
     "$terminal" = "kitty";
-    "$browser" = "firefox";
+    "$browser" = "mullvad-browser";
 
     # Scripts
 

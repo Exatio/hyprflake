@@ -21,7 +21,7 @@
     # -----------------------------------------------------
 
     windowrule = [
-      "tile,^(firefox)$"
+      "tile,^(mullvad-browser)$"
       "float,^(pavucontrol)$"
       "float,^(blueman-manager)$"
 
@@ -38,7 +38,7 @@
       "workspace 2, class:^(Obsidian)$"
       "workspace 6 silent, class:^(vesktop)$"
 
-      "opacity 0.9 0.7, class:^(firefox)$"
+      "opacity 0.9 0.7, class:^(mullvad-browser)$"
       "opacity 0.9 0.7, class:^(thunar)$"
     ];
 
