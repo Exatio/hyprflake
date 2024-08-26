@@ -55,7 +55,8 @@
       cat = "bat";
       shutdown = "systemctl poweroff";
       fonts = "~/hyprflake/scripts/fonts.sh";
-      rebuild = "sudo nixos-rebuild switch --flake ~/hyprflake#nixos-laptop";
+      rebuildl = "sudo nixos-rebuild switch --flake ~/hyprflake#laptop";
+      rebuildd = "sudo nixos-rebuild switch --flake ~/hyprflake#desktop";
       update = "sudo nix flake update ~/hyprflake";
       ncg = "nix-collect-garbage -d && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
     };

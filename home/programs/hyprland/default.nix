@@ -4,7 +4,6 @@
 
   imports = [
     inputs.hyprland.homeManagerModules.default
-    ./vars.nix
     ./conf/environment.nix
     ./conf/keyboard.nix
     ./conf/window.nix
@@ -38,8 +37,7 @@
         "$scripts/status_bar.sh &"
 
         # Wallpaper
-        "swww kill; swww-daemon --format xrgb &"
-        "$scripts/random_wallpaper.sh &"
+        "swww kill; swww-daemon --format xrgb && $scripts/random_wallpaper.sh &"
 
         # Prevents swayidle from locking computer when not afk (audio running)
         "sway-audio-idle-inhibit &"

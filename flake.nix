@@ -34,13 +34,13 @@
 
     nixosConfigurations = {
 
-      nixos-laptop = nixpkgs.lib.nixosSystem {
+      laptop = nixpkgs.lib.nixosSystem {
         inherit system;
 
         modules = [
           catppuccin.nixosModules.catppuccin
           lanzaboote.nixosModules.lanzaboote
-          ./hosts/nixos-laptop
+          ./hosts/laptop
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -48,6 +48,31 @@
             home-manager.users.exatio = {
               imports = [
                 ./home/exatio.nix
+                ./home/programs/hyprland/vars-laptop.nix
+                catppuccin.homeManagerModules.catppuccin
+              ];
+            };
+            home-manager.extraSpecialArgs = { inherit inputs pkgs; };
+          }
+        ];
+        specialArgs = { inherit inputs; };
+      };
+
+      desktop = nixpkgs.lib.nixosSystem {
+        inherit system;
+
+        modules = [
+          catppuccin.nixosModules.catppuccin
+          lanzaboote.nixosModules.lanzaboote
+          ./hosts/desktop
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.exatio = {
+              imports = [
+                ./home/exatio.nix
+                ./home/programs/hyprland/vars-desktop.nix
                 catppuccin.homeManagerModules.catppuccin
               ];
             };
