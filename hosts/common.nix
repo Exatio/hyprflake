@@ -23,7 +23,7 @@
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
-      timeout = 3;
+      timeout = 5;
 
       systemd-boot = {
         enable = pkgs.lib.mkForce false;
