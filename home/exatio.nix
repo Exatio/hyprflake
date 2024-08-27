@@ -65,17 +65,16 @@
         "image/jpeg"="viewnior.desktop";
 
         # Links (browser)
-
-        "application/x-extension-htm=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "application/x-extension-html=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "application/x-extension-shtml=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "application/x-extension-xht=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "application/x-extension-xhtml=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "application/xhtml+xml=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "text/html=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "x-scheme-handler/chrome=userapp-Navigateur Mullvad-5BX1S2.desktop"; 
-        "x-scheme-handler/http=userapp-Navigateur Mullvad-5BX1S2.desktop";
-        "x-scheme-handler/https=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-htm"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-html"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-shtml"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-xht"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-xhtml"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/xhtml+xml"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "text/html"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "x-scheme-handler/chrome"="userapp-Navigateur Mullvad-5BX1S2.desktop"; 
+        "x-scheme-handler/http"="userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "x-scheme-handler/https"="userapp-Navigateur Mullvad-5BX1S2.desktop";
       };
 
     };
