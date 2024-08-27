@@ -65,16 +65,17 @@
         "image/jpeg"="viewnior.desktop";
 
         # Links (browser)
-        "x-scheme-handler/http"="mullvad-browser.desktop";
-        "x-scheme-handler/https"="mullvad-browser.desktop";
-        "x-scheme-handler/chrome"="mullvad-browser.desktop";
-        "text/html"="mullvad-browser.desktop";
-        "application/x-extension-htm"="mullvad-browser.desktop";
-        "application/x-extension-html"="mullvad-browser.desktop";
-        "application/x-extension-shtml"="mullvad-browser.desktop";
-        "application/xhtml+xml"="mullvad-browser.desktop";
-        "application/x-extension-xhtml"="mullvad-browser.desktop";
-        "application/x-extension-xht"="mullvad-browser.desktop";
+
+        "application/x-extension-htm=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-html=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-shtml=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-xht=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/x-extension-xhtml=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "application/xhtml+xml=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "text/html=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "x-scheme-handler/chrome=userapp-Navigateur Mullvad-5BX1S2.desktop"; 
+        "x-scheme-handler/http=userapp-Navigateur Mullvad-5BX1S2.desktop";
+        "x-scheme-handler/https=userapp-Navigateur Mullvad-5BX1S2.desktop";
       };
 
     };
