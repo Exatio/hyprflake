@@ -18,8 +18,8 @@
 (rc/require-theme 'gruber-darker)
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-20"))
 
-(tool-bar-mode 0)
-(menu-bar-mode 0)
+(tool-bar-mode -1)
+(menu-bar-mode -1)
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (show-paren-mode 1)
