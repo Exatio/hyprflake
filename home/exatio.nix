@@ -37,7 +37,10 @@
       viewnior
       ntfs3g
       sbctl # create secure boot keys
-      ghidra
+      ghidra 
+      prismlauncher # minecraft
+
+      pegasus-frontend # game launcher
     ];
   };
 
