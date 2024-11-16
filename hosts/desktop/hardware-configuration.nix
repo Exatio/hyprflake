@@ -20,12 +20,12 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  fileSystems."/mnt/SDD1TB" = {
+  fileSystems."/mnt/HDD4TB" = {
     device = "/dev/sda1";
     fsType = "ntfs3";
   };
 
-  fileSystems."/mnt/HDD4TB" = {
+  fileSystems."/mnt/SDD1TB" = {
     device = "/dev/sdb1";
     fsType = "ntfs3";
   };
