@@ -18,9 +18,12 @@
     hyprland-plugins.inputs.hyprland.follows = "hyprland";
 
     catppuccin.url = "github:catppuccin/nix";
-
+    
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+
+    # temporary, as the official nixpkgs ryujinx package is down 
+    ryujinx.url = "github:Naxdy/Ryujinx";
 
   };
 

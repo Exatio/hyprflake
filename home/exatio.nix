@@ -41,6 +41,7 @@
       prismlauncher # minecraft
 
       pegasus-frontend # game launcher
+      ryujinx
     ];
   };
 
