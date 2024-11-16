@@ -92,6 +92,9 @@
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
+  # Enable numlock at startup
+  xsession.numlock.enable = true;
+
   home.file.".config/gtk/helpers.rc".text = ''
     TerminalEmulator=kitty
     TerminalEmulatorDismissed=true
