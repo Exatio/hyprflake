@@ -96,6 +96,13 @@
     indicator = true;
   };
 
+  # File manager
+  environment.systemPackages = with pkgs.kdePackages; [
+    dolphin
+    qtwayland
+    qtsvg
+  ];
+
   security.polkit.enable = true;
 
 }

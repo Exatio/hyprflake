@@ -3,8 +3,10 @@
 
   imports = [
     ./programs/git
-    ./programs/gtk
+    ./programs/themes
     ./programs/code
+    ./programs/games
+
     ./fonts
 
     ./desktops/hyprland.nix
@@ -37,11 +39,7 @@
       viewnior
       ntfs3g
       sbctl # create secure boot keys
-      ghidra 
-      prismlauncher # minecraft
-
-      pegasus-frontend # game launcher
-      ryujinx
+      ghidra
     ];
   };
 

@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ../plasma.nix
+    # ../plasma.nix
     ../hyprland.nix
   ];
 

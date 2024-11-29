@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     nwg-look
     qt5ct
+    qt6ct
     catppuccin-qt5ct
     lxappearance
   ];
