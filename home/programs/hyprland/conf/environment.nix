@@ -5,16 +5,11 @@
 {
   
   home.packages = with pkgs; [
- #   dracula-qt5-theme
-    adwaita-qt
-    adwaita-qt6
-    gnome.gnome-themes-extra
-    gtk-engine-murrine
-    sassc
-    orchis
     cantarell-fonts
     bibata-cursors
-    catppuccin-kvantum
+    tela-circle-icon-theme
+    catppuccin-kvantum # qt
+    catppuccin-gtk # gtk
   ];
 
   wayland.windowManager.hyprland.settings = {
@@ -26,7 +21,7 @@
       # Theme
       "XCURSOR_THEME, Bibata-Modern-Classic"
       "XCURSOR_SIZE, 24"
-      "GTK_THEME, Orchis-Dark-Compact"
+      "GTK_THEME, catppuccin-frappe-blue-standard"
 
       # Misc
       "GDK_BACKEND, wayland"
