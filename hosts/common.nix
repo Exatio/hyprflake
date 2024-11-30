@@ -105,7 +105,10 @@
     kdePackages.systemsettings
     kdePackages.qtstyleplugin-kvantum
 
+    kde-cli-tools
+
     nwg-look
+
     qt5ct
     qt6ct
   ];
