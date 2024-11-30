@@ -31,13 +31,9 @@
     wlsunset
     sway-audio-idle-inhibit
     blueman
-    qt5ct
     eww
     deepin.dde-polkit-agent
   ] ++ (with pkgs.xfce; [
-    thunar
-    thunar-archive-plugin
-    thunar-volman
     exo
     xfce4-settings
     xfce4-power-manager

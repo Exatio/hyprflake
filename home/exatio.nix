@@ -3,7 +3,6 @@
 
   imports = [
     ./programs/git
-    ./programs/themes
     ./programs/code
     ./programs/games
 

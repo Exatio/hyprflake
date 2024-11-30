@@ -10,7 +10,7 @@
     "$mainMod" = "SUPER";
 
     # Apps
-    "$fileManager" = "thunar";
+    "$fileManager" = "dolphin";
     "$terminal" = "kitty";
     "$browser" = "mullvad-browser";
 

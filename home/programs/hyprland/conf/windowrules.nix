@@ -39,7 +39,7 @@
       "workspace 6 silent, class:^(vesktop)$"
 
       "opacity 0.9 0.7, class:^(mullvad-browser)$"
-      "opacity 0.9 0.7, class:^(thunar)$"
+      "opacity 0.9 0.7, class:^(dolphin)$"
     ];
 
   };

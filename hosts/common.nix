@@ -96,11 +96,18 @@
     indicator = true;
   };
 
-  # File manager
-  environment.systemPackages = with pkgs.kdePackages; [
-    dolphin
-    qtwayland
-    qtsvg
+  # Theming
+  environment.systemPackages = with pkgs; [
+    
+    kdePackages.dolphin
+    kdePackages.qtwayland
+    kdePackages.qtsvg
+    kdePackages.systemsettings
+    kdePackages.qtstyleplugin-kvantum
+
+    nwg-look
+    qt5ct
+    qt6ct
   ];
 
   security.polkit.enable = true;
