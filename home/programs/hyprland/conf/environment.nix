@@ -40,9 +40,9 @@
       # QT
       "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
       "QT_QPA_PLATFORM, wayland;xcb"
-      "QT_QPA_PLATFORMTHEME, qt6ct"
+      "QT_QPA_PLATFORMTHEME, qt5ct"
       "QT_SCALE_FACTOR, 1"
-      "QT_STYLE_OVERRIDE, kvantum"
+      "QT_STYLE_OVERRIDE, kvantum-dark"
       
       # TODO check below
 

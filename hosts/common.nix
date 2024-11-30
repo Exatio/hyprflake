@@ -106,12 +106,20 @@
     kdePackages.qtstyleplugin-kvantum
 
     kde-cli-tools
+    libsForQt5.kinit
+    libsForQt5.kservice
+    libsForQt5.qtstyleplugin-kvantum
 
     nwg-look
+    xdg-utils
 
     qt5ct
     qt6ct
   ];
+
+  qt.enable = true;
+  xdg.menus.enable = true;
+  xdg.mime.enable = true;
 
   security.polkit.enable = true;
 

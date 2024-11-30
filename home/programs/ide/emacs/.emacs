@@ -1,5 +1,5 @@
 ;;;
-;;; Adapted from https://github.com/rexim/dotfiles/blob/master/.emacs
+;;; Adapted from https://github.com/rexim/dotfiles
 ;;;
 
 ;;; Load all installed Emacs Lisp packages and activate them

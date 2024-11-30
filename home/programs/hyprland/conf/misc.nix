@@ -16,7 +16,7 @@
       key_press_enables_dpms = true;
       # Replace terminal with applications opened with it
       enable_swallow = true;
-      swallow_regex = "^(kitty)$";
+      #swallow_regex = "^(kitty)$";
       swallow_exception_regex = "^(wev)$";
     };
 
