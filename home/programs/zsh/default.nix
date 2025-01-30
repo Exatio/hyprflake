@@ -58,7 +58,7 @@
       fonts = "~/hyprflake/scripts/fonts.sh";
       rebuildl = "sudo nixos-rebuild switch --flake ~/hyprflake#laptop";
       rebuildd = "sudo nixos-rebuild switch --flake ~/hyprflake#desktop";
-      update = "sudo nix flake update ~/hyprflake";
+      update = "sudo nix flake update --flake ~/hyprflake";
       ncg = "nix-collect-garbage -d && sudo nix-collect-garbage -d && sudo rm /nix/var/nix/gcroots/auto/*";
     };
 
