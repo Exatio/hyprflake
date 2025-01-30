@@ -6,16 +6,17 @@
     pfetch
   ];
 
+  catppuccin.starship.enable = true;
   programs.starship = {
     enable = true;
     package = pkgs.starship;
-    catppuccin.enable = true;
+    
   };
 
+  catppuccin.bat.enable = true;
   programs.bat = {
     enable = true;
     package = pkgs.bat;
-    catppuccin.enable = true;
   };
 
   programs.zsh = {

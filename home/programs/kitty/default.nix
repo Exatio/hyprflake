@@ -9,10 +9,9 @@
     })
   ];
 
+  
+  catppuccin.kitty.enable = true;
   programs.kitty = {
-
-    catppuccin.enable = true;
-
     enable = true;
 
     font = {
@@ -31,6 +30,5 @@
     };
 
     shellIntegration.enableZshIntegration = true;
-
   };
 }

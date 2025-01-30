@@ -1,11 +1,12 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ nvtopPackages.amd gnome.gnome-system-monitor ];
+  home.packages = with pkgs; [ nvtopPackages.amd gnome-system-monitor ];
 
+
+  catppuccin.btop.enable = true;
   programs.btop = {
     enable = true;
     package = pkgs.btop;
-    catppuccin.enable = true;
   };
 
 }

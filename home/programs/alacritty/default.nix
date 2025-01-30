@@ -12,10 +12,9 @@
     })
   ];
 
+
+  catppuccin.alacritty.enable = true;
   programs.alacritty = {
-
-    catppuccin.enable = true;
-
     enable = true;
 
     settings = {
@@ -60,6 +59,5 @@
       };
 
     };
-
   };
 }

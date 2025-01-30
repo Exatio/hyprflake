@@ -66,8 +66,6 @@
     };
   };
 
-  # Sound
-  sound.enable = true;
   # hardware.pulseaudio.enable = false;
   services = {
     pipewire = {
@@ -113,10 +111,16 @@
     nwg-look
     xdg-utils
 
-    qt5ct
+    libsForQt5.qt5ct
     qt6ct
   ];
 
+  # Dynamic linking for libraries
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    
+
+  ];
 
   qt.enable = true;
   xdg.menus.enable = true;
