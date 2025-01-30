@@ -117,6 +117,7 @@
     qt6ct
   ];
 
+
   qt.enable = true;
   xdg.menus.enable = true;
   xdg.mime.enable = true;
