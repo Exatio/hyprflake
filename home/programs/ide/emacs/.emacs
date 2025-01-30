@@ -2,6 +2,9 @@
 ;;; Adapted from https://github.com/rexim/dotfiles
 ;;;
 
+;;; Set custom stuff written by Emacs in another file
+(setq custom-file "~/.emacs.custom.el")
+
 ;;; Load all installed Emacs Lisp packages and activate them
 (package-initialize)
 
@@ -18,10 +21,10 @@
 (rc/require-theme 'gruber-darker)
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-20"))
 
-(tool-bar-mode -1)
-(menu-bar-mode -1)
+(tool-bar-mode 0)
+(menu-bar-mode 0)
 (scroll-bar-mode 0)
-(column-number-mode 1)
+(column-number-mode 1) 
 (show-paren-mode 1)
 
 ;;; Company (text completion)
@@ -239,19 +242,3 @@
  'sml-mode
  )
 
-
-;; CUSTOM
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("e27c9668d7eddf75373fa6b07475ae2d6892185f07ebed037eedf783318761d7" default))
- '(package-selected-packages '(gruber-darker-theme dash)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

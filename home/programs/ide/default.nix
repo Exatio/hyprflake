@@ -3,7 +3,7 @@
 
   # Emacs Daemon
   services.emacs = {
-    enable = true;
+    enable = false;
     package = pkgs.emacs;
     defaultEditor = true;
     startWithUserSession = true;
