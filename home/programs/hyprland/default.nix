@@ -33,6 +33,9 @@
         # Print notification if battery low
         "$scripts/battery_notification.sh &"
 
+        # Start Mullvad
+        "mullvad connect &"
+
         # Start Waybar
         "$scripts/status_bar.sh &"
 

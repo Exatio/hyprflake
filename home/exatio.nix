@@ -3,6 +3,7 @@
 
   imports = [
     ./programs/git
+
     ./programs/code
     ./programs/games
 
@@ -16,7 +17,7 @@
     homeDirectory = "/home/exatio";
     packages = with pkgs; [
       # Web
-      mullvad-browser
+      firefox
       ungoogled-chromium
 
       # Discord
