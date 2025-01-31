@@ -113,14 +113,13 @@
 
     libsForQt5.qt5ct
     qt6ct
+
+    mesa
+    libGL
   ];
 
   # Dynamic linking for libraries
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    
-
-  ];
 
   qt.enable = true;
   xdg.menus.enable = true;

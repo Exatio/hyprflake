@@ -21,10 +21,10 @@
       dim_inactive = true;
       dim_strength = 0.05;
 
-      drop_shadow = true;
-      shadow_range = 5;
-      shadow_render_power = 3;
-      "col.shadow" = "rgba(1a1a1aee)";
+      shadow = {
+        range = 5;
+        color = "rgba(1a1a1aee)";
+      };
 
     };
 

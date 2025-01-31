@@ -25,6 +25,7 @@
     # temporary, as the official nixpkgs ryujinx package is down 
     ryujinx.url = "github:Naxdy/Ryujinx";
 
+
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, lanzaboote, ... }@inputs:

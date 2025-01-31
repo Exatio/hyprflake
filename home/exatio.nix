@@ -39,6 +39,7 @@
       ntfs3g
       sbctl # create secure boot keys
       ghidra
+      steam-run
     ];
   };
 

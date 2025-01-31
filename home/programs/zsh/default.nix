@@ -36,6 +36,7 @@
       pfetch
       cat ~/.cache/wal/sequences
 
+      export NIX_LD_LIBRARY_PATH="${pkgs.libGL}/lib"
       export ALTERNATE_EDITOR=""
       export EDITOR="${pkgs.emacs}/bin/emacsclient -t"                                    # $EDITOR opens in terminal
       export VISUAL="${pkgs.emacs}/bin/emacsclient -c -a ${pkgs.emacs}/bin/emacs"         # $VISUAL opens in GUI mode
