@@ -21,25 +21,25 @@
     # -----------------------------------------------------
 
     windowrule = [
-      "tile,^(mullvad-browser)$"
-      "float,^(pavucontrol)$"
-      "float,^(blueman-manager)$"
+      "tile,  class:mullvad-browser"
+      "float, class:pavucontrol"
+      "float, class:blueman-manager"
 
-      "float, nm-connection-editor|blueman-manager"
-      "float, swayimg|Viewnior|pavucontrol"
-      "float, nwg-look|qt5ct|mpv"
-      "float, gnome-system-monitor"
-      "float, dde-polkit-agent"
+      "float, class:nm-connection-editor, class:blueman-manager"
+      "float, class:swayimg, class:Viewnior, class:pavucontrol"
+      "float, class:nwg-look, class:qt5ct, class:mpv"
+      "float, class:gnome-system-monitor"
+      "float, class:dde-polkit-agent"
 
-      "center,^(pavucontrol)"
-    ];
+      "center, class:pavucontrol"
+      
 
-    windowrulev2 = [
-      "workspace 2, class:^(Obsidian)$"
-      "workspace 6 silent, class:^(vesktop)$"
+      "workspace 2, class:Obsidian"
+      "workspace 6 silent, class:vesktop"
 
-      "opacity 0.9 0.7, class:^(mullvad-browser)$"
-      "opacity 0.9 0.7, class:^(thunar)$"
+      "opacity 0.9 0.7, class:mullvad-browser"
+      "opacity 0.9 0.7, class:thunar"
+
     ];
 
   };

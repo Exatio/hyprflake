@@ -1,15 +1,14 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./sddm.nix
+  ];
+
   programs.hyprland = {
     enable = true;
     package = pkgs.hyprland;
     xwayland.enable = true;
     portalPackage = pkgs.xdg-desktop-portal-hyprland;
-  };
-
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
   };
 
   security.rtkit.enable = true;

@@ -27,7 +27,7 @@
 
 
   home.packages = with pkgs; [
-    plasma5Packages.kdeconnect-kde
+    #plasma5Packages.kdeconnect-kde
     wlsunset
     sway-audio-idle-inhibit
     blueman

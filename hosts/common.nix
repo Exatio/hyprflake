@@ -28,13 +28,12 @@
       systemd-boot = {
         enable = pkgs.lib.mkForce false;
         configurationLimit = 3; # shows only last 3 generations on boot
-        memtest86.enable = true;
       };
     };
 
     lanzaboote = {
       enable = true;
-      pkiBundle = "/etc/secureboot";
+      pkiBundle = "/var/lib/sbctl";
     };
   };
 
@@ -99,11 +98,10 @@
     
     kdePackages.dolphin
     kdePackages.qtwayland
-    kdePackages.qtsvg
     kdePackages.systemsettings
     kdePackages.qtstyleplugin-kvantum
-
-    kde-cli-tools
+    kdePackages.kde-cli-tools
+    
     libsForQt5.kinit
     libsForQt5.kservice
     libsForQt5.qtstyleplugin-kvantum
@@ -112,7 +110,7 @@
     xdg-utils
 
     libsForQt5.qt5ct
-    qt6ct
+    kdePackages.qt6ct
 
     mesa
     libGL

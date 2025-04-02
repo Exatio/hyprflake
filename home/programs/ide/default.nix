@@ -31,11 +31,7 @@
     neovim
     vscodium
 
-    (pkgs.nerdfonts.override {
-      fonts = [
-        "Iosevka"
-      ];
-    })
+    nerd-fonts.iosevka
 
   ] ++ (with pkgs.emacsPackages; [
 

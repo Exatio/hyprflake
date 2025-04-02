@@ -5,11 +5,7 @@
     wttrbar
     pavucontrol
 
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-      ];
-    })
+    nerd-fonts.jetbrains-mono
   ];
 
   home.file.".config/waybar/modules".source = ./modules;

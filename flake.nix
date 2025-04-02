@@ -3,11 +3,11 @@
 
   inputs = {
 
-    nixpkgs.url = "nixpkgs/nixos-24.11";
-    #nixpkgs.url = "nixpkgs/nixos-unstable";
+    #nixpkgs.url = "nixpkgs/nixos-24.11";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager/release-24.11";
-    #home-manager.url = "github:nix-community/home-manager";
+    #home-manager.url = "github:nix-community/home-manager/release-24.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     hardware.url = "github:nixos/nixos-hardware";
@@ -19,7 +19,7 @@
 
     catppuccin.url = "github:catppuccin/nix";
     
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.1";
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
     # temporary, as the official nixpkgs ryujinx package is down 
@@ -53,7 +53,7 @@
               imports = [
                 ./home/exatio.nix
                 ./home/programs/hyprland/vars-laptop.nix
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
             };
             home-manager.extraSpecialArgs = { inherit inputs pkgs; };
@@ -77,7 +77,7 @@
               imports = [
                 ./home/exatio.nix
                 ./home/programs/hyprland/vars-desktop.nix
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
             };
             home-manager.extraSpecialArgs = { inherit inputs pkgs; };

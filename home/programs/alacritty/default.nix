@@ -1,15 +1,8 @@
 { pkgs, ... }:
 {
 
-  home.packages = [
-    (pkgs.nerdfonts.override {
-      fonts = [
-        # Watch for the patched fonts table in order to add more
-        # https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
-        # "IBMPlexMono" - will be "BlexMono Nerd Font"
-        "IosevkaTerm"
-      ];
-    })
+  home.packages = with pkgs; [
+    nerd-fonts.iosevka-term
   ];
 
 

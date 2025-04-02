@@ -1,12 +1,8 @@
 { pkgs, ... }:
 {
-  home.packages = [
-    (pkgs.nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "IosevkaTerm"
-      ];
-    })
+  home.packages = with pkgs; [
+    nerd-fonts.fira-code
+    nerd-fonts.iosevka-term
   ];
 
   

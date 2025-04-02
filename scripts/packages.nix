@@ -12,13 +12,12 @@
     pamixer
     swww
 
-
   ];
 
   services.cliphist = {
     enable = true;
     package = pkgs.cliphist;
-    systemdTarget = "hyprland-session.target";
+    systemdTargets = "hyprland-session.target";
   };
 
 }
