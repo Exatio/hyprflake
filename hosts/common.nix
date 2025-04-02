@@ -114,6 +114,8 @@
 
     mesa
     libGL
+
+    networkmanagerapplet
   ];
 
   # Dynamic linking for libraries
