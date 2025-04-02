@@ -21,24 +21,24 @@
     # -----------------------------------------------------
 
     windowrule = [
-      "tile,  class:mullvad-browser"
-      "float, class:pavucontrol"
-      "float, class:blueman-manager"
+      "tile,  class:^(firefox)$"
+      "float, class:^(pavucontrol)$"
+      "float, class:^(blueman-manager)$"
 
-      "float, class:nm-connection-editor, class:blueman-manager"
-      "float, class:swayimg, class:Viewnior, class:pavucontrol"
-      "float, class:nwg-look, class:qt5ct, class:mpv"
-      "float, class:gnome-system-monitor"
-      "float, class:dde-polkit-agent"
+      "float, class:^(nm-connection-editor)$, class:^(blueman-manager)$"
+      "float, class:^(swayimg)$, class:^(Viewnior)$, class:^(pavucontrol)$"
+      "float, class:^(nwg-look)$, class:^(qt5ct)$, class:^(mpv)$"
+      "float, class:^(SystemMonitor)$"
+      "float, class:^(dde-polkit-agent)$"
 
-      "center, class:pavucontrol"
+      "center, class:^(pavucontrol)$"
       
 
-      "workspace 2, class:Obsidian"
-      "workspace 6 silent, class:vesktop"
+      "workspace 2, class:^(Obsidian)$"
+      "workspace 6 silent, class:^(vesktop)$"
 
-      "opacity 0.9 0.7, class:mullvad-browser"
-      "opacity 0.9 0.7, class:thunar"
+      "opacity 0.9 0.7, class:^(firefox)$"
+      "opacity 0.9 0.7, class:^(thunar)$"
 
     ];
 
