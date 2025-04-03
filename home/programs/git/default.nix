@@ -10,9 +10,15 @@
     };
 
     extraConfig = {
+      
       init = {
         defaultBranch = "master";
       };
+
+      merge = {
+        conflictStyle = "diff3";
+      };
+
     };
 
     delta.enable = true;
