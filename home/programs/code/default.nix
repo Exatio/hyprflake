@@ -11,7 +11,6 @@
     gdb
     gf # a GDB frontend
     gnumake
-    clang
 
     # Python
     python312
