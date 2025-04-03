@@ -21,6 +21,7 @@
     # -----------------------------------------------------
 
     windowrule = [
+      "nodim, fullscreen:1"
       "tile,  class:^(firefox)$"
 
       "float, class:^(.*pavucontrol)$"
