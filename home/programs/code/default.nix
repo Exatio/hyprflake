@@ -6,13 +6,22 @@
 
   home.packages = with pkgs; [
 
+    # C
+    gcc
+    gdb
+    gf # a GDB frontend
+    gnumake
+    clang
+
     # Python
     python312
     python312Packages.pip
     python312Packages.pipx
 
-    # Python packages
     python312Packages.fs
+
+    # Haskell
+    ghc
 
     # Zig
     zig
@@ -20,8 +29,9 @@
     # Nim
     nim
     nimble
-
-
-
+    
+    # Reverse engineering
+    ghidra
+    
   ];
 }

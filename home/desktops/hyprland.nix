@@ -42,8 +42,6 @@
     xfce4-power-manager
   ]);
 
-
-
   services.blueman-applet.enable = true;
   services.kdeconnect.enable = true;
 }
