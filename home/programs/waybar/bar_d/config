@@ -1,4 +1,3 @@
-
 {
 	"include": "~/.config/waybar/modules",
 	"layer": "top",
@@ -28,10 +27,6 @@
 			"pulseaudio",
 			"custom/separator#dot-line",
 			"pulseaudio#microphone",
-			"custom/separator#dot-line",
-			"backlight", 
-			"custom/separator#dot-line",		
-			"battery", 
 			"custom/separator#dot-line",
 			"custom/power"
 	],

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, isDesktop, ... }:
 {
   # Special thanks to Stephan Raabe & JaKoolit for their Hyprland configs
 
@@ -14,27 +14,30 @@
     ./conf/windowrules.nix
     ./conf/animations-low.nix
     # ./conf/animations-high.nix
-  ];
+
+  ] ++ (if isDesktop then [
+    ./vars-desktop.nix
+  ] else [
+    ./vars-laptop.nix
+  ]);
 
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
     settings = {
 
-      debug = {
-          disable_logs = false;
-      };
+     # debug = {
+     #     disable_logs = false;
+     # };
 
       exec-once = [
+
+        # Start Mullvad
+        "mullvad connect"
+
         # Clipboard
         "wl-clip-persist --clipboard regular &"
         "wl-paste --watch cliphist store &"
-
-        # Print notification if battery low
-        "$scripts/battery_notification.sh &"
-
-        # Start Mullvad
-        # "mullvad connect &"
 
         # Start Waybar
         "$scripts/status_bar.sh &"
@@ -53,7 +56,11 @@
 
         # Discord at Startup
         "vesktop &"
-      ];
+
+      ] ++ (if isDesktop then [] else [ # Below is applied only on laptop
+        # Print notification if battery low
+        "$scripts/battery_notification.sh &"
+      ]);
 
     };
   };

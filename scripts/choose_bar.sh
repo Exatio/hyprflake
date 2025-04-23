@@ -13,7 +13,7 @@ if [[ ! $(pidof tofi) ]]; then
     fi
 
     if [ "$selected" == "$def" ] ; then
-        ~/hyprflake/scripts/status_bar.sh default &
+        ~/hyprflake/scripts/status_bar.sh bar &
     elif [ "$selected" == "$bar2" ] ; then
         ~/hyprflake/scripts/status_bar.sh bar2 &
     fi

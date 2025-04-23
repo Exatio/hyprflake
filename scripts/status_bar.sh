@@ -2,8 +2,8 @@
 
 STATE_FILE="$HOME/.config/waybar/state.txt"
 
-DEFAULT_CONFIG="$HOME/.config/waybar/default/config"
-DEFAULT_STYLE="$HOME/.config/waybar/default/style.css"
+DEFAULT_CONFIG="$HOME/.config/waybar/bar/config"
+DEFAULT_STYLE="$HOME/.config/waybar/bar/style.css"
 
 BAR2_CONFIG="$HOME/.config/waybar/bar2/config"
 BAR2_STYLE="$HOME/.config/waybar/bar2/style.css"

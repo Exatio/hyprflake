@@ -3,7 +3,7 @@
   imports = [
     ../common.nix # whatever the host, theses settings will not change
 
-    ../users/exatio.nix
+    ../users/mainuser.nix
     # inputs.sops-nix.nixosModules.sops
 
     # Hardware dependent

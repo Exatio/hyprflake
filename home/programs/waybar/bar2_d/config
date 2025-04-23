@@ -1,0 +1,61 @@
+{
+	"include": "~/.config/waybar/modules",
+	"layer": "top",
+	"position": "top",
+	"margin-bottom": 0,
+	"modules-left": [
+	  "clock",
+	  "custom/separator#vertical-line",
+	  "hyprland/workspaces",
+	  "custom/separator#vertical-line",
+	  "tray"
+	],
+	"modules-center": [
+	  "hyprland/window"
+	],
+	"modules-right": [
+	  "temperature",
+	  "custom/separator#vertical-line",
+	  "memory",
+	  "custom/separator#vertical-line",
+	  "cpu",
+	  "custom/separator#vertical-line",
+	  "pulseaudio",
+	  "custom/separator#vertical-line",
+	  "network",
+	  "custom/separator#vertical-line",
+	  "custom/power"
+	],
+	
+	"hyprland/workspaces": {
+	  "format": "{icon}",
+	  "separate-outputs": false,
+	  "active-only": false,
+	  // turn on true to show same all workspaces on each monitor
+	  "all-outputs": false,
+	  "format-icons": {
+		// 1-10
+		"1": "1",
+		"2": "2",
+		"3": "3",
+		"4": "4",
+		"5": "5",
+		"6": "6",
+		"7": "7",
+		"8": "8"		
+		
+		// // 1-10
+		// "1": "一",
+		// "2": "二",
+		// "3": "三",
+		// "4": "四",
+		// "5": "五",
+		// "6": "六",
+		// "7": "七",
+		// "8": "八"
+	  }
+	}
+	
+  }
+  
+  

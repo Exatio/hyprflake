@@ -34,6 +34,7 @@
     lib = nixpkgs.lib;
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
     #unstable-pkgs = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
+    isDesktop = builtins.hasAttr "desktop" self.nixosConfigurations;
   in {
 
     nixosConfigurations = {
@@ -52,11 +53,10 @@
             home-manager.users.exatio = {
               imports = [
                 ./home/exatio.nix
-                ./home/programs/hyprland/vars-laptop.nix
                 catppuccin.homeModules.catppuccin
               ];
             };
-            home-manager.extraSpecialArgs = { inherit inputs pkgs; };
+            home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };
           }
         ];
         specialArgs = { inherit inputs; };
@@ -76,11 +76,10 @@
             home-manager.users.exatio = {
               imports = [
                 ./home/exatio.nix
-                ./home/programs/hyprland/vars-desktop.nix
                 catppuccin.homeModules.catppuccin
               ];
             };
-            home-manager.extraSpecialArgs = { inherit inputs pkgs; };
+            home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };
           }
         ];
         specialArgs = { inherit inputs; };

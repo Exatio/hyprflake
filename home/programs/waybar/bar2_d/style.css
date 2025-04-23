@@ -1,0 +1,70 @@
+@import '../../../.cache/wal/colors-waybar.css';
+
+* {
+    font-family: "Fira Code Nerd Font";
+}
+
+#waybar {
+    background: alpha(@background, 0.6);;
+    color: @foreground;
+}
+
+#clock {
+    padding-left: 4px;
+}
+
+#tray {
+    padding-left: 4px;
+}
+
+#workspaces button:hover {
+    background-color: transparent;
+}
+
+#workspaces button {
+    color: #737373;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 0px;
+}
+
+#workspaces button:hover {
+    background-color: alpha(@background, 0.9);;
+}
+
+#workspaces button.active {
+    color: #84cc16;
+}
+
+#window {
+    color: @foreground;    
+}
+
+#network {
+    color: #3b82f6;
+    margin-right: 8px;
+}
+
+#pulseaudio {
+    color: #14b8a6;
+    margin-right: 4px;
+}
+
+#cpu {
+    color: #0ea5e9;
+    margin-right: 4px;
+}
+
+#temperature {
+    color: #eab308;
+    margin-right: 4px;
+}
+
+#memory {
+    color: #d946ef;
+    margin-right: 4px;
+}
+
+#custom-powermenu {
+    color: #f43f5e;
+}

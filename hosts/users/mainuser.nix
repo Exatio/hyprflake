@@ -10,7 +10,7 @@
     isNormalUser = true;
     description = "Exatio";
     extraGroups = [ "networkmanager" "wheel" ];
-    initialPassword = "aa";
+    initialPassword = "pass";
   };
 
 }
