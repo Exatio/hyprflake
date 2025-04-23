@@ -14,11 +14,15 @@
 
     # Python
     python312
+    
     python312Packages.pip
     python312Packages.pipx
 
     python312Packages.fs
+    python312Packages.mip
 
+    jetbrains.pycharm-professional
+    
     # Haskell
     ghc
 

@@ -73,9 +73,9 @@
   (interactive)
   (whitespace-mode 1)
   (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-  (Claudio-whitespace-display-newline))
+  (Claudio-whitespace-display-newline)) ;whats this for?
 
-(add-hook 'tuareg-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'tuareg-mode-hook 'rc/set-up-whitespace-handling) ;;ocaml
 (add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'c-mode-hook 'rc/set-up-whitespace-handling)
 (add-hook 'simpc-mode-hook 'rc/set-up-whitespace-handling)
@@ -135,7 +135,7 @@
       (concat dired-omit-files "\\|^\\..+$"))
 (setq-default dired-dwim-target t)
 (setq dired-listing-switches "-alh")
-
+(setq dired-mouse-drag-files t) ;;drop files out of emacs, on X, maybe not wayland.
 
 ;;; c-mode
 (setq-default c-basic-offset 4
@@ -158,7 +158,7 @@
 (add-hook 'haskell-mode-hook 'haskell-indent-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook 'haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'hindent-mode)
+(add-hook 'haskell-mode-hook 'hindent-mode) ;rexim removed hident completly.why?
 
 ;;; LaTeX mode
 (add-hook 'tex-mode-hook
@@ -180,11 +180,12 @@
 ;;; Tide
 (rc/require 'tide)
 
-(defun rc/turn-on-tide ()
+(defun rc/turn-on-tide-and-flycheck ()  ;Flycheck is a dependency of tide
   (interactive)
-  (tide-setup))
+  (tide-setup)
+  (flycheck-mode 1))
 
-(add-hook 'typescript-mode-hook 'rc/turn-on-tide)
+(add-hook 'typescript-mode-hook 'rc/turn-on-tide-and-flycheck)
 
 ;;; Paredit (better parenthesis management for lisp like languages)
 (rc/require 'paredit)
