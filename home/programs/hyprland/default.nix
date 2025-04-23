@@ -34,7 +34,7 @@
         "$scripts/battery_notification.sh &"
 
         # Start Mullvad
-        "mullvad connect &"
+        # "mullvad connect &"
 
         # Start Waybar
         "$scripts/status_bar.sh &"
