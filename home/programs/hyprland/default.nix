@@ -33,7 +33,7 @@
       exec-once = [
 
         # Start Mullvad
-        "mullvad connect"
+        "$scripts/mullvad_toggle.sh &"
 
         # Clipboard
         "wl-clip-persist --clipboard regular &"
@@ -56,6 +56,7 @@
 
         # Discord at Startup
         "vesktop &"
+
 
       ] ++ (if isDesktop then [] else [ # Below is applied only on laptop
         # Print notification if battery low
