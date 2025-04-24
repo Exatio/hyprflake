@@ -41,7 +41,7 @@
 	  "on-update": "",
 	  "on-scroll-up": "~/hyprflake/scripts/screen_brightness.sh --inc",
 	  "on-scroll-down": "~/hyprflake/scripts/screen_brightness.sh --dec",
-	  "smooth-scrolling-threshold": 1,
+	  "smooth-scrolling-threshold": 1
 	},
 
 	"battery": {
@@ -65,7 +65,7 @@
 	  "format-icons": ["", "", "", "", ""],
 	  "format-time": "{H}h {M}min",
 	  "tooltip": true,
-	  "tooltip-format": "{timeTo} {power}w",
+	  "tooltip-format": "{timeTo} {power}w"
 	},
 
 	"temperature": {
@@ -136,7 +136,7 @@
 	  "on-click-right": "pavucontrol -t 3",
 	  "on-scroll-up": "~/hyprflake/scripts/volume.sh --inc",
 	  "on-scroll-down": "~/hyprflake/scripts/volume.sh --dec",
-	  "smooth-scrolling-threshold": 1,
+	  "smooth-scrolling-threshold": 1
 	},
 
 
@@ -148,9 +148,18 @@
 	  "on-click-right": "pavucontrol -t 4",
 	  "on-scroll-up": "~/hyprflake/scripts/volume.sh --mic-inc",
 	  "on-scroll-down": "~/hyprflake/scripts/volume.sh --mic-dec",
-	  "scroll-step": 5,
+	  "scroll-step": 5
 	},
 
+	"custom/vpn": {
+	  "format": "{}",
+	  "exec": "mullvad status | awk '{print $1;}'",
+	  "tooltip": "Mullvad VPN",
+	  "on-click": "~/hyprflake/scripts/mullvad_toggle.sh",
+	  "on-click-right": "mullvad-vpn",
+	  "signal": 10,
+	  "exec-on-event": false
+	},
 
 	"custom/power": {
 	  "format": "⏻ ",
@@ -179,5 +188,5 @@
 	    "interval": 3600,
 	    "exec": "wttrbar --location Paris --lang fr",
 	    "return-type": "json"
-	},
+	}
 }

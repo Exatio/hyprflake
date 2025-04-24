@@ -1,4 +1,4 @@
-{
+x{
 	"include": "~/.config/waybar/modules",
 	"layer": "top",
 	"position": "top",
@@ -22,9 +22,11 @@
 	  "custom/separator#vertical-line",
 	  "pulseaudio",
 	  "custom/separator#vertical-line",
+	  "pulseaudio#microphone",
+	  "custom/separator#vertical-line",
 	  "battery",
 	  "custom/separator#vertical-line",
-	  "network",
+	  "custom/vpn",
 	  "custom/separator#vertical-line",
 	  "custom/power"
 	],

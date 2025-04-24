@@ -24,6 +24,8 @@
 	"modules-right": [
 			"tray",
 			"custom/separator#dot-line",
+			"custom/vpn",
+			"custom/separator#dot-line",
 			"pulseaudio",
 			"custom/separator#dot-line",
 			"pulseaudio#microphone",

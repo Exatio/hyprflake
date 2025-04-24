@@ -22,7 +22,9 @@
 	  "custom/separator#vertical-line",
 	  "pulseaudio",
 	  "custom/separator#vertical-line",
-	  "network",
+	  "pulseaudio#microphone",
+	  "custom/separator#vertical-line",
+	  "custom/vpn",
 	  "custom/separator#vertical-line",
 	  "custom/power"
 	],
