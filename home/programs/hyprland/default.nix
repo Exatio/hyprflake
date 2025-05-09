@@ -32,8 +32,8 @@
 
       exec-once = [
 
-        # Start Mullvad
-        "$scripts/mullvad_toggle.sh &"
+        # Start Mullvad, then Discord
+        "$scripts/mullvad_toggle.sh && vesktop &"
 
         # Clipboard
         "wl-clip-persist --clipboard regular &"
@@ -53,9 +53,6 @@
 
         # Gamma
         "wlsunset -t 4000 -T 6500 -d 900 -S 07:00 -s 19:00 &"
-
-        # Discord at Startup
-        "vesktop &"
 
 
       ] ++ (if isDesktop then [] else [ # Below is applied only on laptop
