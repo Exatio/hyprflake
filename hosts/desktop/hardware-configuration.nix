@@ -20,14 +20,23 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  fileSystems."/mnt/Windows" = {
+    device = "/dev/nvme0n1p3";
+    fsType = "ntfs3";
+    options = [ "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
+  };
+
   fileSystems."/mnt/SDD1TB" = {
     device = "/dev/sda1";
     fsType = "ntfs3";
+    options = [ "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
   };
+
 
   fileSystems."/mnt/HDD4TB" = {
     device = "/dev/sdb1";
     fsType = "ntfs3";
+    options = [ "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
   };
 
   swapDevices = [ ];
