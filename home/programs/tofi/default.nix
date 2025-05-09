@@ -15,7 +15,7 @@
         padding-left = 35%
         padding-top = 35%
         result-spacing = 25
-        num-results = 5
+        num-results = 10
         font = spacemono
         background-color = #000A
       '';
@@ -28,7 +28,7 @@
         padding-left = 5%
         padding-top = 35%
         result-spacing = 25
-        num-results = 5
+        num-results = 10
         font = monospace
         background-color = #000A
         prompt-text = "Search: "
@@ -42,7 +42,7 @@
         padding-left = 35%
         padding-top = 35%
         result-spacing = 25
-        num-results = 5
+        num-results = 10
         font = monospace
         background-color = #000A
         prompt-text = "Type: "

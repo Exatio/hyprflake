@@ -11,6 +11,7 @@
     gdb
     gf # a GDB frontend
     gnumake
+    
 
     # Python
     python312
@@ -20,8 +21,6 @@
 
     python312Packages.fs
     python312Packages.mip
-
-    jetbrains.pycharm-professional
     
     # Haskell
     ghc

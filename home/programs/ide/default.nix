@@ -1,6 +1,11 @@
 { pkgs, ... }:
 {
-
+  # Emacs
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
+ 
   # Emacs Daemon
   services.emacs = {
     enable = true;
@@ -35,6 +40,9 @@
 
   ] ++ (with pkgs.emacsPackages; [
 
+  ]) ++ (with pkgs.jetbrains; [
+    clion
+    pycharm-professional
   ]);
 
 
