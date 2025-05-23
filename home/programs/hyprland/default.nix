@@ -52,7 +52,7 @@
         "${pkgs.deepin.dde-polkit-agent}/lib/polkit-1-dde/dde-polkit-agent &"
 
         # Gamma
-        "wlsunset -t 4000 -T 6500 -d 900 -S 07:00 -s 19:00 &"
+        "wlsunset -t 5000 -T 6500 -d 900 -S 07:00 -s 21:00 &"
 
 
       ] ++ (if isDesktop then [] else [ # Below is applied only on laptop
