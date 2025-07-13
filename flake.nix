@@ -22,10 +22,6 @@
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
-    # temporary, as the official nixpkgs ryujinx package is down 
-    ryujinx.url = "github:Naxdy/Ryujinx";
-
-
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, lanzaboote, ... }@inputs:

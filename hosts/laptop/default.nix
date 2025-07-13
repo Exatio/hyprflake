@@ -58,7 +58,6 @@
   # Time
   time = {
     timeZone = "Europe/Paris";
-    hardwareClockInLocalTime = true; # dual boot clock fix
   };
 
   # Kernel Packages

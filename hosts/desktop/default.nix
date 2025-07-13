@@ -37,11 +37,6 @@
   };
   services.tumbler.enable = true;
 
-  # TODO: remove (temporary installation of ryujinx as its mainstream version is not available)
-  environment.systemPackages = [
-    pkgs.ryujinx
-  ];
-
   # Allow KDE Connect
   networking.firewall = {
     enable = true;
@@ -61,7 +56,6 @@
   # Time
   time = {
     timeZone = "Europe/Paris";
-    hardwareClockInLocalTime = true; # dual boot clock fix
   };
 
   # Kernel Packages
