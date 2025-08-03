@@ -18,6 +18,7 @@
 (setq backup-directory-alist      `(("." . , (concat user-emacs-directory "backups"))))
 
 ;;; Appearance
+(rc/require-theme 'kanagawa-themes)
 (rc/require-theme 'gruber-darker)
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-20"))
 
