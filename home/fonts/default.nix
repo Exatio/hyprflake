@@ -17,7 +17,11 @@
     # https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
     # "IBMPlexMono" - will be "BlexMono Nerd Font"
     nerd-fonts.hack
-    
+    nerd-fonts.iosevka
+    nerd-fonts.iosevka-term
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.noto
   ];
 
 }

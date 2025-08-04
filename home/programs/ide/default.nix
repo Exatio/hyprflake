@@ -36,8 +36,6 @@
     neovim
     vscodium
 
-    nerd-fonts.iosevka
-
   ] ++ (with pkgs.emacsPackages; [
 
   ]) ++ (with pkgs.jetbrains; [

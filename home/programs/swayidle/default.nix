@@ -2,7 +2,7 @@
 {
   services.swayidle =
   let
-    lockCommand = "swaylock -fF";
+    lockCommand = "${pkgs.swaylock-effects}/bin/swaylock -fF";
     dpmsCommand = "${pkgs.hyprland}/hyprctl dispatch dpms";
   in
   {

@@ -1,0 +1,58 @@
+@import './colors.css';
+
+window {
+    font-family: FiraCode Nerd Font Med;
+    font-size: 15pt;
+    background-color: rgba(24, 27, 32, 0.2);
+    color: @on_primary_container;
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    background-color: transparent;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 10px 2px transparent;
+    border-radius: 36px;
+    margin: 10px;
+}
+
+button:focus {
+    box-shadow: none;
+    background-size : 20%;
+}
+
+button:hover {
+    background-size: 50%;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,.4);
+    background-color: @primary_container;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: @secondary_fixed_dim;
+
+    color: transparent; 
+    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
+}
+
+
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+
+
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}

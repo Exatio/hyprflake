@@ -1,43 +1,24 @@
 #!/usr/bin/env bash
-# ----------------------------------------------------- 
-# Select random wallpaper and create color scheme
-# ----------------------------------------------------- 
-wal -q -i ~/hyprflake/assets/wallpapers/
 
 # ----------------------------------------------------- 
-# Load current pywal color scheme
+# Select random wallpaper, set it and create color scheme
 # ----------------------------------------------------- 
-source "$HOME/.cache/wal/colors.sh"
 
-# -----------------------------------------------------
-# Copy selected wallpaper into .cache folder
-# ----------------------------------------------------- 
-cp $wallpaper ~/.cache/current_wallpaper.jpg
+# Get a random wallpaper file from the wallpapers directory
+wallpaper_dir="$HOME/hyprflake/assets/wallpapers"
+selected=$(find "$wallpaper_dir" -type f | shuf -n 1)
 
-# ----------------------------------------------------- 
-# get wallpaper image name
-# ----------------------------------------------------- 
-newwall=$(echo $wallpaper | sed "s|/home/exatio/hyprflake/assets/wallpapers/||g")
+# Generate color scheme and set wallpaper
+matugen image "$selected"
 
 # ----------------------------------------------------- 
-# Set the new wallpaper
+# Get wallpaper image name (filename only)
 # ----------------------------------------------------- 
-swww img $wallpaper \
-    --transition-fps=60 \
-    --transition-type="grow" \
-    --transition-pos "0.854, 0.977" \
-    --transition-step 90 \
-
-~/hyprflake/scripts/status_bar.sh
-cp -f ~/.cache/wal/colors-cava ~/.config/cava/config
-pywalfox update
-
-sleep 1
+newwall=$(basename "$selected")
 
 # ----------------------------------------------------- 
 # Send notification
 # ----------------------------------------------------- 
-notify-send "Colors and Wallpaper updated" "with image $newwall"
+notify-send "Colors and Wallpaper updated" "With image: $newwall"
 
 echo "DONE!"
-

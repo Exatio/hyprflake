@@ -37,6 +37,10 @@
       "float, class:^(mpv)$"
       "float, class:^(.*SystemMonitor)$"
       "float, class:^(dde-polkit-agent)$"
+      
+      "float, title:^(Picture-in-Picture|Firefox)$"
+      "size 800 450, title:^(Picture-in-Picture|Firefox)$"
+      "pin, title:^(Picture-in-Picture|Firefox)$"
 
       "workspace 2, class:^(obsidian)$"
       "float, title:^(Obsidian)$"

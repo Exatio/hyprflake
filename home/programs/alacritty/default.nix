@@ -1,16 +1,12 @@
 { pkgs, ... }:
 {
-
-  home.packages = with pkgs; [
-    nerd-fonts.iosevka-term
-  ];
-
-
-  catppuccin.alacritty.enable = true;
+  
   programs.alacritty = {
     enable = true;
 
     settings = {
+      
+      #general.import = ["colors.toml"];
 
       font = {
 
@@ -38,7 +34,7 @@
 
       };
 
-      shell = {
+      terminal.shell = {
         program = "${pkgs.zsh}/bin/zsh";
       };
 

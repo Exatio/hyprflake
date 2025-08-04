@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 
 STATE_FILE="$HOME/.config/waybar/state.txt"
 

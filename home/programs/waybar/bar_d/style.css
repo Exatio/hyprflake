@@ -1,4 +1,4 @@
-@import '../../../.cache/wal/colors-waybar.css';
+@import '../colors.css';
 
 * {
     font-family: "JetBrainsMono Nerd Font";
@@ -8,7 +8,7 @@
     font-size: 98%;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
     padding: 0;
-    margin-top: 1;
+    margin-top: 1px;
 }
 
 window#waybar {
@@ -37,7 +37,7 @@ tooltip {
 }
 
 tooltip label {
-    color: #cba6f7;
+    color: @primary;
     margin-right: 2px;
     margin-left: 2px;
 }
@@ -163,12 +163,12 @@ tooltip label {
 }
 
 #workspaces button label{
-    color: 	#EDEDED ;
+    color: 	@on_secondary_fixed;
     font-weight: bolder;
 }
 
 #workspaces button.active label{
-    color: #181818;
+    color: @on_primary_fixed;
     font-weight: bolder;
 }
 
@@ -180,29 +180,31 @@ tooltip label {
     margin-left: 25px;
 }
 #workspaces button{
-    box-shadow: rgba(0, 0, 0, 0.116) 2 2 5 2px;
-    background-color: #181818 ;
-    border-color: #181818 ;
+    box-shadow: rgba(0, 0, 0, 0.116) 2px 2px 5px 2px;
     border-radius: 15px;
     margin-right: 10px;
     padding: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
     font-weight: bolder;
-    color: 	#FFFFFF ;
+    border: 2px solid @outline; 
+    background: radial-gradient(@secondary 0%, @tertiary 100%); 
+    background-size: 400% 400%;
+    animation: gradient 5s linear infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.68);
 }
 
 #workspaces button.active{
     padding-right: 20px;
-    box-shadow: rgba(0, 0, 0, 0.288) 2 2 5 2px;
+    box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
     padding-left: 20px;
     padding-bottom: 0px;
     /* background: rgb(203,166,247);
     background: radial-gradient(circle, rgba(181,255,233,1) 0%, rgba(99,161,233,1) 50%, rgba(170,120,166,1) 100%); */
-    background: radial-gradient(@color11 0%, @color12 50%, @color13 100%); 
+    background: radial-gradient(@primary 0%, @secondary 70%, @tertiary 100%); 
     background-size: 400% 400%;
     animation: gradient 5s linear infinite;
+    border: 2px solid @outline; 
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 

@@ -6,14 +6,11 @@
     pfetch
   ];
 
-  catppuccin.starship.enable = true;
   programs.starship = {
     enable = true;
     package = pkgs.starship;
-    
   };
 
-  catppuccin.bat.enable = true;
   programs.bat = {
     enable = true;
     package = pkgs.bat;
@@ -34,7 +31,6 @@
 
     initExtraFirst = ''
       pfetch
-      cat ~/.cache/wal/sequences
 
       export NIX_LD_LIBRARY_PATH="${pkgs.libGL}/lib"
       export ALTERNATE_EDITOR=""

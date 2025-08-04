@@ -4,8 +4,6 @@
     waybar
     wttrbar
     pavucontrol
-
-    nerd-fonts.jetbrains-mono
   ];
 
   home.file.".config/waybar/modules".source = ./modules;

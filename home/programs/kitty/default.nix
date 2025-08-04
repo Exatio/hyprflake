@@ -1,12 +1,5 @@
 { pkgs, ... }:
-{
-  home.packages = with pkgs; [
-    nerd-fonts.fira-code
-    nerd-fonts.iosevka-term
-  ];
-
-  
-  catppuccin.kitty.enable = true;
+{  
   programs.kitty = {
     enable = true;
 
@@ -23,6 +16,7 @@
       confirm_os_window_close = 0;
       enable_audio_bell = false;
       shell = "${pkgs.zsh}/bin/zsh";
+      #include = "colors.conf";
     };
 
     shellIntegration.enableZshIntegration = true;

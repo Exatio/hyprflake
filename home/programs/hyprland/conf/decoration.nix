@@ -28,13 +28,12 @@
 
     };
 
-    # TODO check
-
-    # blurls = waybar
-    # blurls = wofi
-
-    # layerrule = blur, waybar
-    # layerrule = blur, wofi
+    layerrule = [
+      "blur, waybar"
+      "blur, launcher"
+      "blur, logout_dialog"
+    ];
+    
   };
 
 }

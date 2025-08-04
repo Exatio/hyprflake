@@ -1,5 +1,5 @@
-# HyprFlake - My NixOS Hyprland config with Pywal !
-This repo contains my dotfiles for my Hyprland with Pywal setup on my NixOS system.
+# HyprFlake - My NixOS Hyprland config with Matugen !
+This repo contains my dotfiles for my Hyprland with Matugen setup on my NixOS system.
 
 ![Static Badge](https://img.shields.io/badge/BUILT%20WITH%20NIX-77B5FE?style=for-the-badge&logo=nixos)
 
@@ -20,7 +20,7 @@ This repo contains my dotfiles for my Hyprland with Pywal setup on my NixOS syst
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminals: [Kitty](https://github.com/kovidgoyal/kitty) & [Alacritty](https://github.com/alacritty/alacritty)
 - Shell: [Zsh]( https://www.zsh.org/)
-- Current theme: [Pywal](https://github.com/dylanaraps/pywal)
+- Current theme: [Matugen](https://github.com/InioX/matugen)
 
 ## Gallery
 
@@ -30,7 +30,7 @@ This repo contains my dotfiles for my Hyprland with Pywal setup on my NixOS syst
 | ![desktop](./assets/screenshots/tofi_run.png) | ![desktop](./assets/screenshots/tofi_screenshot.png) |
 
 
-<details><summary>More Pywal screenshots</summary>
+<details><summary>More Matugen screenshots</summary>
 
 |                                               |                                               |
 | :-------------------------------------------: | :-------------------------------------------: |

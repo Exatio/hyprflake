@@ -15,10 +15,9 @@
     ../programs/tofi
     ../programs/screenshots
     ../programs/cava
-    ../programs/pywal
+    ../programs/matugen
     ../programs/swaylock
     ../programs/wlogout
-    ../programs/dunst
     ../programs/swayidle
 
     ../../scripts/packages.nix

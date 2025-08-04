@@ -11,6 +11,7 @@
     playerctl
     pamixer
     swww
+    jq
 
   ];
 

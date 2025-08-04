@@ -1,12 +1,13 @@
-@import '../../../.cache/wal/colors-waybar.css';
+@import '../colors.css';
 
 * {
     font-family: "Fira Code Nerd Font";
+    font-weight: bold;
 }
 
 #waybar {
-    background: alpha(@background, 0.6);;
-    color: @foreground;
+    background: alpha(@background, 0.6);
+    color: @primary;
 }
 
 #clock {
@@ -17,27 +18,25 @@
     padding-left: 4px;
 }
 
-#workspaces button:hover {
-    background-color: transparent;
-}
-
 #workspaces button {
-    color: #737373;
+    color: @primary;
     padding-left: 4px;
     padding-right: 4px;
     border-radius: 0px;
 }
 
 #workspaces button:hover {
-    background-color: alpha(@background, 0.9);;
+    color: @on_secondary_container;
+    background-color: alpha(@secondary_container, 0.7);
 }
 
 #workspaces button.active {
-    color: #84cc16;
+    color: @on_primary_container;
+    background-color: alpha(@primary_container, 0.7);
 }
 
 #window {
-    color: @foreground;    
+    color: @primary;    
 }
 
 #network {
