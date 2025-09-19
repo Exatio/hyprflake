@@ -48,9 +48,6 @@
         # Prevents swayidle from locking computer when not afk (audio running)
         "sway-audio-idle-inhibit &"
 
-        # Deepin Polkit
-        "${pkgs.deepin.dde-polkit-agent}/lib/polkit-1-dde/dde-polkit-agent &"
-
         # Gamma
         "wlsunset -t 5000 -T 6500 -d 900 -S 07:00 -s 21:00 &"
 

@@ -36,7 +36,6 @@
       "float, class:^(qt5ct)$"
       "float, class:^(mpv)$"
       "float, class:^(.*SystemMonitor)$"
-      "float, class:^(dde-polkit-agent)$"
       
       "float, title:^(Picture-in-Picture|Firefox)$"
       "size 800 450, title:^(Picture-in-Picture|Firefox)$"

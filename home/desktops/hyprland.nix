@@ -31,7 +31,6 @@
     sway-audio-idle-inhibit
     blueman
     eww
-    deepin.dde-polkit-agent
   ] ++ (with pkgs.xfce; [
     thunar
     thunar-archive-plugin
