@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   home.packages = with pkgs; [
     fd
@@ -25,26 +25,22 @@
     syntaxHighlighting.enable = true;
     historySubstringSearch = {
       enable = true;
+      searchUpKey = "^[OA";
+      searchDownKey = "^[OB";
       #searchUpKey = "^[[A";
       #searchDownKey = "^[OB";
     };
 
-    initExtraFirst = ''
+    initContent = lib.mkAfter ''
       pfetch
 
       export NIX_LD_LIBRARY_PATH="${pkgs.libGL}/lib"
       export ALTERNATE_EDITOR=""
-      export EDITOR="${pkgs.emacs}/bin/emacsclient -t"                                    # $EDITOR opens in terminal
-      export VISUAL="${pkgs.emacs}/bin/emacsclient -c -a ${pkgs.emacs}/bin/emacs"         # $VISUAL opens in GUI mode
-    '';
+      export EDITOR="${pkgs.emacs}/bin/emacsclient -t"
+      export VISUAL="${pkgs.emacs}/bin/emacsclient -c -a ${pkgs.emacs}/bin/emacs"
 
-    initExtra = ''
-      bindkey '^[OA' history-substring-search-up
-      bindkey '^[OB' history-substring-search-down
       eval "$(starship init zsh)"
     '';
-
-
 
     shellAliases = {
       c = "clear && pfetch";
