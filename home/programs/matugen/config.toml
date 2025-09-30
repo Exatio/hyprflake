@@ -48,8 +48,8 @@ output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
 
 [templates.firefox-usercontent]
-input_path = '~/hyprflake/home/programs/matugen/templates/userChrome.css'
-output_path = '~/.mozilla/Firefox/default/chrome/userChrome.css'
+input_path = '~/hyprflake/home/programs/matugen/templates/userContent.css'
+output_path = '~/.mozilla/firefox/default/chrome/userContent.css'
 
 [templates.btop]
 input_path = '~/hyprflake/home/programs/matugen/templates/btop.theme'
