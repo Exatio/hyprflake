@@ -3,6 +3,8 @@
 
   imports = [
     ./programs/git
+    
+    ./programs/firefox
 
     ./programs/code
     ./programs/games
@@ -17,7 +19,7 @@
     homeDirectory = "/home/exatio";
     packages = with pkgs; [
       # Web
-      firefox
+      # firefox
       ungoogled-chromium
 
       # Discord
