@@ -14,14 +14,26 @@ in
   home.file = {
     ".mozilla/native-messaging-hosts/darkreader.json".text = builtins.toJSON
       (darkreaderManifest // { allowed_extensions = [ "darkreader@alexhulbert.com" ]; });
-    ".mozilla/firefox/default/chrome/layout-oneline.css".source = ./oneline.css;
-    ".mozilla/firefox/default/chrome/layout-twoline.css".source = ./twoline.css;
-    ".mozilla/firefox/default/chrome/blurredfox".source = builtins.fetchGit {
-      url = "https://github.com/eromatiya/blurredfox";
-      rev = "6976b5460f47bd28b4dc53bd093012780e6bfed3";
+    ".mozilla/firefox/default/chrome/layout.css".source = ./layout.css;
+    ".mozilla/firefox/default/chrome/blurredfox".source = pkgs.stdenv.mkDerivation {
+      name = "blurredfox-patched";
+
+      src = builtins.fetchGit {
+        url = "https://github.com/eromatiya/blurredfox";
+        rev = "6976b5460f47bd28b4dc53bd093012780e6bfed3";
+      };
+
+      patches = [ ./exatio.patch ];
+
+      installPhase = ''
+        mkdir -p $out
+        cp -r * $out/
+      '';
     };
+      
   };
 
+  home.packages = with pkgs; [ nodejs ]; # i have it elsewhere but for the people just looking at this file its important
 
   programs.firefox = {
     enable = true;
@@ -50,9 +62,9 @@ in
       userChrome = ''
         @import url('blurredfox/userChrome.css');
         @import url('userContent.css');
-        @import url('layout-twoline.css');
+        @import url('layout.css');
       ''; 
-        # @import url('layout-oneline.css');  # the seaglass creator uses this as well
+        #   # the seaglass creator uses this as well
     };
   };
     

@@ -32,6 +32,9 @@
     nim
     nimble
     
+    # Node
+    nodejs
+    
     # Reverse engineering
     ghidra
     

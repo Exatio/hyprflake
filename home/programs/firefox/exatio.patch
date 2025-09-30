@@ -1,0 +1,26 @@
+diff --git a/parts/urlbar.css b/parts/urlbar.css
+index 877e7c6..0947b52 100644
+--- a/parts/urlbar.css
++++ b/parts/urlbar.css
+@@ -9,7 +9,8 @@ URL bar
+ /* URL bar max-width and centered hack */
+ #urlbar {
+ 	max-width: 70% !important;
+-	margin: 0 15% !important;
++	/* exatio's patch : removed margin from urlbar 
++	margin: 0 15% !important; */
+ 
+ 	/* URL bar and toolbar height */
+ 	--urlbar-height: 36px !important;
+@@ -151,6 +152,11 @@ URL bar
+ 	text-align: center !important;
+ }
+ 
++/* exatio's patch : text align left when focused */
++#urlbar-input:focus {
++  text-align: left !important;
++}
++
+ /* Urlbar buttons */
+ .urlbar-icon,
+ .urlbar-page-action {
