@@ -42,14 +42,18 @@ input_path = '~/hyprflake/home/programs/matugen/templates/dunstrc'
 output_path = '~/.config/dunst/dunstrc_mutable'
 post_hook = 'cat ~/.config/dunst/dunstrc ~/.config/dunst/dunstrc_mutable > ~/.config/dunst/dunstrc_combined && mv ~/.config/dunst/dunstrc_combined ~/.config/dunst/dunstrc_mutable && dunstctl reload ~/.config/dunst/dunstrc_mutable'
 
-[templates.pywalfox]
+[templates.seaglass-colors]
+input_path = '~/hyprflake/home/programs/matugen/templates/colors'
+output_path = '~/.cache/wal/colors'
+
+[templates.seaglass-firefox-usercontent]
+input_path = '~/hyprflake/home/programs/matugen/templates/userContent.css'
+output_path = '~/.mozilla/firefox/default/chrome/userContent.css'
+
+[templates.seaglass-pywalfox]
 input_path = '~/hyprflake/home/programs/matugen/templates/pywalfox-colors.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update'
-
-[templates.firefox-usercontent]
-input_path = '~/hyprflake/home/programs/matugen/templates/userContent.css'
-output_path = '~/.mozilla/firefox/default/chrome/userContent.css'
 
 [templates.btop]
 input_path = '~/hyprflake/home/programs/matugen/templates/btop.theme'

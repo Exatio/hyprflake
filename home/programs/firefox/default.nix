@@ -9,6 +9,8 @@ let
 in 
 {
   # you have to install the custom darkreader extension provided in the darkreader folder. 
+  # after that, open dark reader extension, dev tools, preview new design
+  # after that, dark reader extension, settings, advanced, enable synchronize site fixes
   home.file = {
     ".mozilla/native-messaging-hosts/darkreader.json".text = builtins.toJSON
       (darkreaderManifest // { allowed_extensions = [ "darkreader@alexhulbert.com" ]; });

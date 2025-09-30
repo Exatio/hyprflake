@@ -18,7 +18,7 @@ const opacity = "14"
 const colorFile = process.env.HOME + '/.cache/wal/colors'
 const onFileChange = async () => {
     const colors = (await read(colorFile)).toString().split("\n")
-    setTheme(colors[0], colors[7], opacity)
+    setTheme(colors[0], colors[25], opacity)
 }
 
 watchFile(colorFile, onFileChange)
