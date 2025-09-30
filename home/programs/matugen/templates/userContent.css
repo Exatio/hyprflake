@@ -1,14 +1,14 @@
-html[data-darkreader-mode] body a {{
-  color: rgb({{ colors.primary.default.rgb}}) !important;
-}}
+html[data-darkreader-mode] body a {
+  color: rgb({{colors.primary.default.rgb}}) !important;
+}
 
-@-moz-document regexp('^(?!http).*') {{
-  :root>* {{
-    background: rgb({{ colors.background.default.rgb}}) !important;
-  }}
-}}
+@-moz-document regexp('^(?!http).*') {
+  :root>* {
+    background: rgb({{colors.background.default.rgb}}) !important;
+  }
+}
 
-#urlbar-input-container:-moz-lwtheme, .urlbarView:-moz-lwtheme {{
+#urlbar-input-container:-moz-lwtheme, .urlbarView:-moz-lwtheme {
   background-color: color-mix(in srgb, var(--lwt-accent-color) 87%, black);
-}}
+}
 
