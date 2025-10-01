@@ -35,6 +35,25 @@
       enable = true;
       pkiBundle = "/var/lib/sbctl";
     };
+
+    # Splash, see https://github.com/adi1090x/plymouth-themes?tab=readme-ov-file
+    plymouth = {
+      enable = true;
+      theme = "cuts";
+      themePackages = [ 
+        (pkgs.adi1090x-plymouth-themes.overrideAttrs {
+          selectedThemes = [
+            "cuts "      #fav
+            "dark_planet"
+            "flame"
+            "hud_3"
+            "loader_2"   #fav
+            "loader_alt" #fav
+            "pixels"
+          ];
+        })
+      ];
+    };
   };
 
    # For NTFS Support

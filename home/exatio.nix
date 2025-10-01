@@ -38,6 +38,7 @@
       unzip
       obsidian
       vlc
+      haruna
       viewnior
       ntfs3g
       sbctl # create secure boot keys

@@ -14,12 +14,15 @@
           ignore_opacity = true;
           xray = true;
       };
+      
+      /*
       active_opacity = 0.9;
       inactive_opacity = 0.8;
       fullscreen_opacity = 1.0;
+      */
 
       dim_inactive = true;
-      dim_strength = 0.2;
+      dim_strength = 0.1;
 
       shadow = {
         range = 5;
