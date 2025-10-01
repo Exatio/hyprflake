@@ -118,14 +118,12 @@
     kdePackages.dolphin
     kdePackages.qtwayland
     kdePackages.systemsettings
-    kdePackages.qtstyleplugin-kvantum
     kdePackages.kde-cli-tools
     
     libsForQt5.kinit
     libsForQt5.kservice
     libsForQt5.qtstyleplugin-kvantum
 
-    nwg-look
     xdg-utils
 
     libsForQt5.qt5ct
@@ -146,6 +144,4 @@
   xdg.mime.enable = true;
 
   security.polkit.enable = true;
-  security.polkit.package = pkgs.polkit;
-
 }

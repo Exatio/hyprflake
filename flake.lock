@@ -198,6 +198,27 @@
         "type": "github"
       }
     },
+    "hypr-darkwindow": {
+      "inputs": {
+        "hyprland": [
+          "hyprland"
+        ],
+        "nix-filter": "nix-filter"
+      },
+      "locked": {
+        "lastModified": 1758877635,
+        "narHash": "sha256-0jqliHlmW/lEDC3X8tYrqdY6d15h1hF40p32r4Nsa4w=",
+        "owner": "micha4w",
+        "repo": "Hypr-DarkWindow",
+        "rev": "744f3c69cfc33b3ddb5902000807b80425139ef6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "micha4w",
+        "repo": "Hypr-DarkWindow",
+        "type": "github"
+      }
+    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -513,6 +534,21 @@
         "type": "github"
       }
     },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1731533336,
+        "narHash": "sha256-oRam5PS1vcrr5UPgALW0eo1m/5/pls27Z/pabHNy2Ms=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "f7653272fd234696ae94229839a99b73c9ab7de0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1758035966,
@@ -631,6 +667,7 @@
         "catppuccin": "catppuccin",
         "hardware": "hardware",
         "home-manager": "home-manager",
+        "hypr-darkwindow": "hypr-darkwindow",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "lanzaboote": "lanzaboote",

@@ -71,6 +71,7 @@
       "$mainMod SHIFT, tab, workspace, m-1"
       "ALT, tab, cyclenext,"          # change focus to another window
       "ALT SHIFT, tab, bringactivetotop,"   # bring it to the top
+      "$mainMod, O, shadeactivewindow, chromakey" # chromakey control
 
       # Scripts
       ## Powermenu

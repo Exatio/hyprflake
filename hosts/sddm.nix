@@ -9,8 +9,8 @@
     };
 
     # values : astronaut black_hole cyberpunk hyprland_kath jake_the_dog 
-    # values : japanese_aesthetic pixel_sakura pixel_sakura_static post-apocalyptic_hacker purple_leaves
-    embeddedTheme = "pixel_sakura";
+    # japanese_aesthetic pixel_sakura pixel_sakura_static post-apocalyptic_hacker purple_leaves
+    embeddedTheme = "purple_leaves";
   };
 
   sddm-chili = pkgs.sddm-chili-theme.override {

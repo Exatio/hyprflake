@@ -9,7 +9,7 @@
     ../programs/kitty
 
     ../programs/zsh
-
+    ../programs/gtk
     ../programs/waybar
     ../programs/btop
     ../programs/tofi
@@ -31,6 +31,7 @@
     sway-audio-idle-inhibit
     blueman
     eww
+    kdePackages.polkit-kde-agent-1
   ] ++ (with pkgs.xfce; [
     thunar
     thunar-archive-plugin

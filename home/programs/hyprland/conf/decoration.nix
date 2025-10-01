@@ -4,39 +4,35 @@
 {
 
   wayland.windowManager.hyprland.settings = {
-
+    
     decoration = {
       rounding = 10;
+
       blur = {
           enabled = true;
-          size = 10;
+          size = 3;
           passes = 3;
-          ignore_opacity = true;
           xray = true;
       };
-      
-      /*
-      active_opacity = 0.9;
-      inactive_opacity = 0.8;
-      fullscreen_opacity = 1.0;
-      */
-
-      dim_inactive = true;
-      dim_strength = 0.1;
 
       shadow = {
-        range = 5;
-        color = "rgba(1a1a1aee)";
+        enabled = true;
+        range = 8;
+        render_power = 3;
+        color = "rgba(000000D6)";
       };
-
     };
 
     layerrule = [
       "blur, waybar"
       "blur, launcher"
       "blur, logout_dialog"
+
+      "blur, swaync-control-center"
+      "blur, swaync-notification-window"
+      "noanim, swaync-control-center"
     ];
-    
+
   };
 
 }

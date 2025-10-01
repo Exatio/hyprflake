@@ -11,7 +11,6 @@
     ./conf/layouts.nix
     ./conf/misc.nix
     ./conf/keybindings.nix
-    ./conf/windowrules.nix
     ./conf/animations-low.nix
     # ./conf/animations-high.nix
 
@@ -24,6 +23,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
+    plugins = [
+      inputs.hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
+    ];
     settings = {
 
      # debug = {
@@ -51,6 +53,8 @@
         # Gamma
         "wlsunset -t 5000 -T 6500 -d 900 -S 07:00 -s 21:00 &"
 
+        # KDE Polkit
+        "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1 &"
 
       ] ++ (if isDesktop then [
         

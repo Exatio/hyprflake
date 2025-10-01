@@ -3,24 +3,27 @@
 
   inputs = {
 
-    #nixpkgs.url = "nixpkgs/nixos-24.11";
+    /* nixpkgs */
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
-    #home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    hardware.url = "github:nixos/nixos-hardware";
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
+    lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
+    /* hypr stuff */
     hyprland.url = "github:hyprwm/Hyprland";
 
     hyprland-plugins.url = "github:hyprwm/hyprland-plugins";
     hyprland-plugins.inputs.hyprland.follows = "hyprland";
-
-    catppuccin.url = "github:catppuccin/nix";
     
-    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
-    lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+    hypr-darkwindow.url = "github:micha4w/Hypr-DarkWindow";
+    hypr-darkwindow.inputs.hyprland.follows = "hyprland";
+
+    /* misc */
+    catppuccin.url = "github:catppuccin/nix";
+    hardware.url = "github:nixos/nixos-hardware";
 
   };
 

@@ -19,6 +19,11 @@ input_path = '~/hyprflake/home/programs/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
+[templates.hyprland-darkwindow]
+input_path = '~/hyprflake/home/programs/matugen/templates/hypr-darkwindow.conf'
+output_path = '~/.config/hypr/hdw.rgb.conf'
+post_hook = '~/hyprflake/scripts/hdwrgbtofloat.sh'
+
 [templates.waybar]
 input_path = '~/hyprflake/home/programs/matugen/templates/colors.css'
 output_path = '~/.config/waybar/colors.css'

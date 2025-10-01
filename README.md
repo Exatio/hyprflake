@@ -54,3 +54,5 @@ A lot of options have to be modified according to your system, so you have to go
 ### Hyprland
 - [Ja Koolit's setup](https://github.com/JaKooLit/Hyprland-Dots): Structure, reference, scripts
 - [Stephan Raabe's setup](https://gitlab.com/stephan-raabe/dotfiles): Reference, scripts
+- [Alex Hulbert's Seaglass setup](https://github.com/alexhulbert/SeaGlass): For the firefox/dark reader config and the hyprland plugin (now merged to [DarkWindow](https://github.com/micha4w/Hypr-DarkWindow))
+

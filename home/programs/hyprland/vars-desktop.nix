@@ -9,6 +9,7 @@
       "$scripts" = "/home/exatio/hyprflake/scripts";
 
       monitor = [
+        ",addreserved,-6,0,0,0"
         "$internalM, 2560x1440@165, 0x0, 1"
         "$externalM, 2560x1440@60, -2560x0, 1"
       ];
