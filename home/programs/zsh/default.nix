@@ -16,6 +16,12 @@
     package = pkgs.bat;
   };
 
+  programs.zoxide = {
+    enable = true;
+    package = pkgs.zoxide;
+    enableZshIntegration = true;
+  };
+
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -44,6 +50,7 @@
 
     shellAliases = {
       c = "clear && pfetch";
+      cd = "z";
       pf = "pfetch";
       ls = "eza -la";
       cat = "bat";
