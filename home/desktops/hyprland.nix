@@ -12,7 +12,7 @@
     ../programs/gtk
     ../programs/waybar
     ../programs/btop
-    ../programs/tofi
+    ../programs/quickshell
     ../programs/screenshots
     ../programs/cava
     ../programs/matugen

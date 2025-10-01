@@ -25,7 +25,6 @@
 
     layerrule = [
       "blur, waybar"
-      "blur, launcher"
       "blur, logout_dialog"
 
       "blur, swaync-control-center"

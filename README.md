@@ -19,7 +19,7 @@ This repo contains my dotfiles for my Hyprland with Matugen setup on my NixOS sy
 - Window manager: [Hyprland](https://github.com/hyprwm/Hyprland)
 - Status bar: [Waybar](https://github.com/Alexays/Waybar)
 - Terminals: [Kitty](https://github.com/kovidgoyal/kitty) & [Alacritty](https://github.com/alacritty/alacritty)
-- Shell: [Zsh]( https://www.zsh.org/)
+- Shell: [Zsh]( https://www.zsh.org/) with [Starship](https://github.com/starship/starship)
 - Current theme: [Matugen](https://github.com/InioX/matugen)
 
 ## Gallery

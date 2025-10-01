@@ -2,9 +2,17 @@
 {
   home = {
 
+    /* TODO: a lot of work here ! Move everything to quickshell
+      -> Wallpaper changer
+      -> App Launcher
+        
+    */
+
     packages = [
       pkgs.tofi
     ];
+
+    /* still using tofi for clipboard & screenshots. can we move on ? :( */
 
     file = {
       ".config/tofi/config".text = ''
@@ -48,7 +56,7 @@
         prompt-text = "Type: "
       '';
     };
-
+    
   };
 
 }
