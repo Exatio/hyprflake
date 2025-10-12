@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ../ide
+    ./ide.nix
   ];
 
   home.packages = with pkgs; [

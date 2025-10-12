@@ -66,13 +66,13 @@
 
   # Bluetooth
   hardware.bluetooth.enable = true;
-
+/*
   # Ollama
   services.ollama = {
     enable = true;
     acceleration = "rocm";
   };
-  
+  */
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 }

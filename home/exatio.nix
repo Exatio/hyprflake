@@ -10,7 +10,6 @@
     ./programs/games
 
     ./fonts
-
     ./desktops/hyprland.nix
   ];
 
@@ -42,7 +41,6 @@
       viewnior
       ntfs3g
       sbctl # create secure boot keys
-      ghidra
       steam-run
     ];
   };
