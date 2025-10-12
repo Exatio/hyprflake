@@ -22,12 +22,11 @@
     hypr-darkwindow.inputs.hyprland.follows = "hyprland";
 
     /* misc */
-    catppuccin.url = "github:catppuccin/nix";
     hardware.url = "github:nixos/nixos-hardware";
 
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, lanzaboote, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, lanzaboote, ... }@inputs:
   let
     system = "x86_64-linux";
     lib = nixpkgs.lib;
@@ -42,7 +41,6 @@
         inherit system;
 
         modules = [
-          catppuccin.nixosModules.catppuccin
           lanzaboote.nixosModules.lanzaboote
           ./hosts/laptop
           home-manager.nixosModules.home-manager
@@ -52,7 +50,6 @@
             home-manager.users.exatio = {
               imports = [
                 ./home/exatio.nix
-                catppuccin.homeModules.catppuccin
               ];
             };
             home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };
@@ -65,7 +62,6 @@
         inherit system;
 
         modules = [
-          catppuccin.nixosModules.catppuccin
           lanzaboote.nixosModules.lanzaboote
           ./hosts/desktop
           home-manager.nixosModules.home-manager
@@ -75,7 +71,6 @@
             home-manager.users.exatio = {
               imports = [
                 ./home/exatio.nix
-                catppuccin.homeModules.catppuccin
               ];
             };
             home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };

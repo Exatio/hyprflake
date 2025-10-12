@@ -46,13 +46,7 @@
       steam-run
     ];
   };
-
-  # Catppuccin
-  catppuccin = {
-    flavor = "macchiato";
-    accent = "rosewater";
-  };
-
+  
   # Enable home-manager
   programs.home-manager.enable = true;
 

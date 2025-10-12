@@ -5,7 +5,9 @@
     /* TODO: a lot of work here ! Move everything to quickshell
       -> Wallpaper changer
       -> App Launcher
-        
+      -> Clipboard history
+      -> Screenshot options
+      -> Wlogout (meh, not sure)
     */
 
     packages = [

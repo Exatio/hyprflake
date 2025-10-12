@@ -42,7 +42,6 @@
       
       /* Decoration */
       "opacity 0.999, class:.*"
-      "opacity 0.70, class:thunar"
       "forcergbx, title:Picture-in-Picture"
 
       /* Launcher */

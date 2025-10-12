@@ -11,9 +11,19 @@
   gtk = {
     enable = true;
 
+    /* I'd really love to use this theme but it makes all GTK windows opaque and thus disables the blur effect :(
     theme = {
-      name = "Juno-palenight";
-      package = pkgs.juno-theme;
+      name = "Orchis-Dark-Nord";
+      package = pkgs.orchis-theme.override {
+        tweaks = [ "nord" ];
+        border-radius = 15;
+      };
+    };
+    */
+
+    theme = {
+      name = "Breeze-Dark";
+      package = pkgs.kdePackages.breeze-gtk;
     };
 
     iconTheme = {
