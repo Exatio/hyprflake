@@ -284,8 +284,8 @@
       },
       "original": {
         "owner": "hyprwm",
-        "ref": "meson-disable-lto",
         "repo": "hyprland",
+        "rev": "b12feef8b3b831be99d93b157ff86f56466cb8bb",
         "type": "github"
       }
     },

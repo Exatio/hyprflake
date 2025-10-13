@@ -13,7 +13,7 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
 
     /* hypr stuff */
-    hyprland.url = "github:hyprwm/hyprland/meson-disable-lto";
+    hyprland.url = "github:hyprwm/hyprland/b12feef8b3b831be99d93b157ff86f56466cb8bb";
     #hyprland.url = "github:hyprwm/hyprland/b12feef8b3b831be99d93b157ff86f56466cb8bb"; 
     #hyprland.inputs.hyprutils.url = "github:hyprwm/hyprutils/94cce794344538c4d865e38682684ec2bbdb2ef3";
 
