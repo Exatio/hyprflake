@@ -42,7 +42,7 @@
       
       /* Decoration */
       "opacity 0.999, class:.*"
-      "forcergbx, title:Picture-in-Picture"
+      # TODO:see "forcergbx, title:Picture-in-Picture"
 
       /* Launcher */
       # noborder, class:ulauncher

@@ -167,11 +167,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1760130406,
-        "narHash": "sha256-GKMwBaFRw/C1p1VtjDz4DyhyzjKUWyi1K50bh8lgA2E=",
+        "lastModified": 1760308497,
+        "narHash": "sha256-4qZancYWXPvpJEpMIHb9jZULUglnBB5ebbGveZWLoY4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d305eece827a3fe317a2d70138f53feccaf890a1",
+        "rev": "02d23e6291082fb72c2cecc6cc4994dac899842a",
         "type": "github"
       },
       "original": {
@@ -275,16 +275,17 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1760227591,
-        "narHash": "sha256-zqyzWqTRgNV8inISkZCvAxJLZbjIzcD9mnPabFCtYPU=",
+        "lastModified": 1760303720,
+        "narHash": "sha256-Nlo/skBB3wj6myHv3Dxv4t0Zd2tP3C22cnjwcOhLwuc=",
         "owner": "hyprwm",
-        "repo": "Hyprland",
-        "rev": "ed936430216e7aa5f6f53d22eff713f8e9ed69ac",
+        "repo": "hyprland",
+        "rev": "b12feef8b3b831be99d93b157ff86f56466cb8bb",
         "type": "github"
       },
       "original": {
         "owner": "hyprwm",
-        "repo": "Hyprland",
+        "ref": "meson-disable-lto",
+        "repo": "hyprland",
         "type": "github"
       }
     },

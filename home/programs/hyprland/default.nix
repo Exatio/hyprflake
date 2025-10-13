@@ -28,9 +28,7 @@
     ];
     settings = {
 
-     # debug = {
-     #     disable_logs = false;
-     # };
+      debug.disable_logs = false;
 
       exec-once = [
 

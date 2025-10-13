@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./sddm.nix
@@ -6,9 +6,9 @@
 
   programs.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     xwayland.enable = true;
-    portalPackage = pkgs.xdg-desktop-portal-hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
 
   security.rtkit.enable = true;
@@ -19,9 +19,9 @@
     enable = true;
     wlr.enable = false;
     xdgOpenUsePortal = false;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
-      xdg-desktop-portal-gtk
+    extraPortals = [
+      inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
     ];
   };
 
