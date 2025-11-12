@@ -15,25 +15,27 @@
 (load "~/.emacs.rc/autocommit-rc.el")
 
 ;;; Autosave to dir
-(setq backup-directory-alist      `(("." . , (concat user-emacs-directory "backups"))))
+(setq backup-directory-alist `(("." . , (concat user-emacs-directory "backups"))))
 
-;;; Appearance
-(rc/require-theme 'gruber-darker)
+;;;; Appearance
+(rc/require-theme 'gruber-darker) ; gruber-darker or zenburn
 (add-to-list 'default-frame-alist '(font . "Iosevka Nerd Font-20"))
-
+  
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 (column-number-mode 1) 
 (show-paren-mode 1)
 
-;;; Company (text completion)
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
+
+;;; Text Completion
 (rc/require 'company)
 (require 'company)
+(global-company-mode) ; disable it for haskell?
 
-(global-company-mode)
-
-;;; ido (emacs completion)
+;;; Emacs Completion
 (rc/require 'smex 'ido-completing-read+)
 (require 'ido-completing-read+)
 
@@ -41,14 +43,8 @@
 (ido-everywhere 1)
 (ido-ubiquitous-mode 1)
 
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
-
-;;; Relative line numbers
-(when (version<= "26.0.50" emacs-version)
-  (setq display-line-numbers-type 'relative)
-  (global-display-line-numbers-mode))
-
+(global-set-key (kbd "M-x") 'smex)                             ; better M-x
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command) ; old M-x
 
 ;;; Snippets
 (rc/require 'yasnippet)
@@ -59,45 +55,14 @@
 
 (yas-global-mode 1)
 
-;;; Cut lines if they are off the screen
-(defun rc/enable-word-wrap ()
-  (interactive)
-  (toggle-word-wrap 1))
-
-(add-hook 'markdown-mode-hook 'rc/enable-word-wrap)
-
-
-;;; Remove trailing whitespaces
-;;; Whitespace mode
-(defun rc/set-up-whitespace-handling ()
-  (interactive)
-  (whitespace-mode 1)
-  (add-to-list 'write-file-functions 'delete-trailing-whitespace)
-  (Claudio-whitespace-display-newline)) ;whats this for?
-
-(add-hook 'tuareg-mode-hook 'rc/set-up-whitespace-handling) ;;ocaml
-(add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'c-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'simpc-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'emacs-lisp-mode 'rc/set-up-whitespace-handling)
-(add-hook 'java-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'lua-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'scala-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'haskell-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'erlang-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'asm-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'nasm-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'nim-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'porth-mode-hook 'rc/set-up-whitespace-handling)
-
 ;;; jump
 (rc/require 'dumb-jump)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+
+;;; Move Text
+(rc/require 'move-text)
+(global-set-key (kbd "M-p") 'move-text-up)
+(global-set-key (kbd "M-n") 'move-text-down)
 
 ;;; helm
 (rc/require 'helm 'helm-git-grep 'helm-ls-git)
@@ -135,7 +100,56 @@
       (concat dired-omit-files "\\|^\\..+$"))
 (setq-default dired-dwim-target t)
 (setq dired-listing-switches "-alh")
-(setq dired-mouse-drag-files t) ;;drop files out of emacs, on X, maybe not wayland.
+(setq dired-mouse-drag-files t) ; doesn't work on wayland. fix ?
+
+;;; TODO: lol this doesnt work
+(defun rc/enable-word-wrap ()
+  (interactive)
+  (toggle-word-wrap 1))
+
+(add-hook 'markdown-mode-hook 'rc/enable-word-wrap)
+
+;;; Whitespace mode & remove trailing whitespaces for some modes
+(defun rc/set-up-whitespace-handling ()
+  (interactive)
+  (whitespace-mode 1)
+  (add-to-list 'write-file-functions 'delete-trailing-whitespace)
+  (Claudio-whitespace-display-newline)) ; dont visualize new lines in whitespace-mode
+
+(add-hook 'tuareg-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'simpc-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'c-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'emacs-lisp-mode 'rc/set-up-whitespace-handling)
+(add-hook 'java-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'lua-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'scala-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'haskell-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'erlang-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'asm-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'nasm-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'nim-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'porth-mode-hook 'rc/set-up-whitespace-handling)
+
+;;; Paredit (better parenthesis management for lisp like languages)
+;;; Smartparens ? Puni ?
+(rc/require 'paredit)
+
+(defun rc/turn-on-paredit ()
+  (interactive)
+  (paredit-mode 1))
+
+(add-hook 'emacs-lisp-mode-hook  'rc/turn-on-paredit)
+(add-hook 'clojure-mode-hook     'rc/turn-on-paredit)
+(add-hook 'lisp-mode-hook        'rc/turn-on-paredit)
+(add-hook 'common-lisp-mode-hook 'rc/turn-on-paredit)
+(add-hook 'scheme-mode-hook      'rc/turn-on-paredit)
+(add-hook 'racket-mode-hook      'rc/turn-on-paredit)
 
 ;;; c-mode
 (setq-default c-basic-offset 4
@@ -147,6 +161,38 @@
                          (interactive)
                          (c-toggle-comment-style -1)))
 
+;; simpc-mode
+(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
+(add-to-list 'auto-mode-alist '("\\.[b]\\'" . simpc-mode))
+
+(defun astyle-buffer (&optional justify)
+  (interactive)
+  (let ((saved-line-number (line-number-at-pos)))
+    (shell-command-on-region
+     (point-min)
+     (point-max)
+     "astyle --style=kr"
+     nil
+     t)
+    (goto-line saved-line-number)))
+
+(add-hook 'simpc-mode-hook
+          (lambda ()
+            (interactive)
+            (setq-local fill-paragraph-function 'astyle-buffer)))
+
+;; python-mode
+(rc/require 'elpy)
+
+(defvar rc/elpy-enabled nil)
+(defun rc/turn-on-elpy ()
+  (interactive)
+  (unless rc/elpy-enabled
+    (elpy-enable)
+    (setq rc/elpy-enabled t))
+  (elpy-mode 1))
+
+(add-hook 'python-mode-hook 'rc/turn-on-elpy)
 
 ;;; Haskell mode
 ;;; When I'll be there, go check https://github.com/serras/emacs-haskell-tutorial/blob/master/tutorial.md
@@ -158,7 +204,6 @@
 (add-hook 'haskell-mode-hook 'haskell-indent-mode)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook 'haskell-doc-mode)
-(add-hook 'haskell-mode-hook 'hindent-mode) ;rexim removed hident completly.why?
 
 ;;; LaTeX mode
 (add-hook 'tex-mode-hook
@@ -178,28 +223,22 @@
 (add-to-list 'auto-mode-alist '("\\.ant\\'" . nxml-mode))
 
 ;;; Tide
-(rc/require 'tide)
+(rc/require 'tide 'typescript-mode)
 
-(defun rc/turn-on-tide-and-flycheck ()  ;Flycheck is a dependency of tide
+(defun rc/turn-on-tide-and-flycheck ()  ; flycheck is a dependency of tide
   (interactive)
   (tide-setup)
   (flycheck-mode 1))
 
 (add-hook 'typescript-mode-hook 'rc/turn-on-tide-and-flycheck)
 
-;;; Paredit (better parenthesis management for lisp like languages)
-(rc/require 'paredit)
-
-(defun rc/turn-on-paredit ()
+;;; eldoc mode
+(defun rc/turn-on-eldoc-mode ()
   (interactive)
-  (paredit-mode 1))
+  (eldoc-mode 1))
 
-(add-hook 'emacs-lisp-mode-hook  'rc/turn-on-paredit)
-(add-hook 'clojure-mode-hook     'rc/turn-on-paredit)
-(add-hook 'lisp-mode-hook        'rc/turn-on-paredit)
-(add-hook 'common-lisp-mode-hook 'rc/turn-on-paredit)
-(add-hook 'scheme-mode-hook      'rc/turn-on-paredit)
-(add-hook 'racket-mode-hook      'rc/turn-on-paredit)
+(add-hook 'emacs-lisp-mode-hook 'rc/turn-on-eldoc-mode)
+
 
 ;;; Emacs lisp
 (add-hook 'emacs-lisp-mode-hook
@@ -207,6 +246,7 @@
              (local-set-key (kbd "C-c C-j")
                             (quote eval-print-last-sexp))))
 (add-to-list 'auto-mode-alist '("Cask" . emacs-lisp-mode))
+
 
 ;;; Packages that don't require configuration
 (rc/require
@@ -232,14 +272,11 @@
  'nginx-mode
  'kotlin-mode
  'go-mode
- 'php-mode
  'racket-mode
  'qml-mode
  'ag
- 'hindent
- 'elpy
- 'typescript-mode
  'rfc-mode
  'sml-mode
+ 'zig-mode
  )
 

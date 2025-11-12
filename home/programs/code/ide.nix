@@ -8,7 +8,7 @@
  
   # Emacs Daemon
   services.emacs = {
-    enable = true;
+    enable = false;
     package = pkgs.emacs;
     defaultEditor = true;
     startWithUserSession = true;
@@ -35,7 +35,7 @@
     vim
     neovim
     vscodium
-
+    silver-searcher
   ] ++ (with pkgs.emacsPackages; [
 
   ]) ++ (with pkgs.jetbrains; [
