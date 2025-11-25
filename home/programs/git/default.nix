@@ -2,30 +2,34 @@
 {
   programs.git = {
     enable = true;
-    userName = "Exatio";
-    userEmail = "exatio@proton.me";
+    
+    settings = {
 
-    aliases = {
-      tree = "log --graph --decorate --pretty=oneline --abbrev-commit --all";
-    };
+      user.name = "Exatio";
+      user.email = "exatio@proton.me";
 
-    extraConfig = {
-      
-      init = {
-        defaultBranch = "master";
+      aliases = {
+        tree = "log --graph --decorate --pretty=oneline --abbrev-commit --all";
       };
 
-      merge = {
-        conflictStyle = "diff3";
+      extraConfig = {
+        
+        init = {
+          defaultBranch = "master";
+        };
+
+        merge = {
+          conflictStyle = "diff3";
+        };
+
       };
 
     };
-
-    delta.enable = true;
 
     package = pkgs.git;
   };
-
+  
+  programs.delta.enable = true;
   programs.git-cliff.enable = true;
 
 }

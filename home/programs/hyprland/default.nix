@@ -25,7 +25,7 @@
     package = null;
     portalPackage = null;
     plugins = [
-      inputs.hypr-darkwindow.packages.${pkgs.system}.Hypr-DarkWindow
+      inputs.hypr-darkwindow.packages.${pkgs.stdenv.hostPlatform.system}.Hypr-DarkWindow
     ];
     settings = {
 

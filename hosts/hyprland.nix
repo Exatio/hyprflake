@@ -7,9 +7,9 @@
   # It IS supposed to be a duplicated entry. oops
   programs.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     xwayland.enable = true;
-    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
   
 
@@ -23,7 +23,7 @@
     xdgOpenUsePortal = false;
     config.common.default = "hyprland"; # "*" for the first in lexicographical order.
     extraPortals = [
-      inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
   };
