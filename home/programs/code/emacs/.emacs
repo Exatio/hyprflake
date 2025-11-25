@@ -31,9 +31,11 @@
 (global-display-line-numbers-mode)
 
 ;;; Text Completion
-(rc/require 'company)
+(rc/require 'company 'company-flx)
 (require 'company)
+
 (global-company-mode) ; disable it for haskell?
+(company-flx-mode 1)
 
 ;;; Emacs Completion
 (rc/require 'smex 'ido-completing-read+)
@@ -116,25 +118,25 @@
   (add-to-list 'write-file-functions 'delete-trailing-whitespace)
   (Claudio-whitespace-display-newline)) ; dont visualize new lines in whitespace-mode
 
-(add-hook 'tuareg-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'simpc-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'c-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'c++-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'emacs-lisp-mode 'rc/set-up-whitespace-handling)
-(add-hook 'java-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'lua-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'rust-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'scala-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'tuareg-mode-hook   'rc/set-up-whitespace-handling)
+(add-hook 'simpc-mode-hook    'rc/set-up-whitespace-handling)
+(add-hook 'c-mode-hook        'rc/set-up-whitespace-handling)
+(add-hook 'c++-mode-hook      'rc/set-up-whitespace-handling)
+(add-hook 'emacs-lisp-mode    'rc/set-up-whitespace-handling)
+(add-hook 'java-mode-hook     'rc/set-up-whitespace-handling)
+(add-hook 'lua-mode-hook      'rc/set-up-whitespace-handling)
+(add-hook 'rust-mode-hook     'rc/set-up-whitespace-handling)
+(add-hook 'scala-mode-hook    'rc/set-up-whitespace-handling)
 (add-hook 'markdown-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'haskell-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'python-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'erlang-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'asm-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'nasm-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'go-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'nim-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'yaml-mode-hook 'rc/set-up-whitespace-handling)
-(add-hook 'porth-mode-hook 'rc/set-up-whitespace-handling)
+(add-hook 'haskell-mode-hook  'rc/set-up-whitespace-handling)
+(add-hook 'python-mode-hook   'rc/set-up-whitespace-handling)
+(add-hook 'erlang-mode-hook   'rc/set-up-whitespace-handling)
+(add-hook 'asm-mode-hook      'rc/set-up-whitespace-handling)
+(add-hook 'nasm-mode-hook     'rc/set-up-whitespace-handling)
+(add-hook 'go-mode-hook       'rc/set-up-whitespace-handling)
+(add-hook 'nim-mode-hook      'rc/set-up-whitespace-handling)
+(add-hook 'yaml-mode-hook     'rc/set-up-whitespace-handling)
+(add-hook 'porth-mode-hook    'rc/set-up-whitespace-handling)
 
 ;;; Paredit (better parenthesis management for lisp like languages)
 ;;; Smartparens ? Puni ?
@@ -150,6 +152,13 @@
 (add-hook 'common-lisp-mode-hook 'rc/turn-on-paredit)
 (add-hook 'scheme-mode-hook      'rc/turn-on-paredit)
 (add-hook 'racket-mode-hook      'rc/turn-on-paredit)
+
+;;; lsp-mode lsp-booster ccls clangd ?
+(rc/require 'lsp-mode 'lsp-ui)
+
+(add-hook 'simpc-mode-hook  'lsp)
+(add-hook 'c-mode-hook      'lsp)
+(add-hook 'c++-mode-hook    'lsp)
 
 ;;; c-mode
 (setq-default c-basic-offset 4

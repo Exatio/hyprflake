@@ -35,7 +35,9 @@
     vim
     neovim
     vscodium
+
     silver-searcher
+    clang-tools
   ] ++ (with pkgs.emacsPackages; [
 
   ]) ++ (with pkgs.jetbrains; [
