@@ -6,7 +6,7 @@
 
     source-code-pro
 
-    noto-fonts-emoji
+    noto-fonts-color-emoji
 
     cantarell-fonts
 
