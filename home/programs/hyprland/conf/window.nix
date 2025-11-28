@@ -31,65 +31,53 @@
       "col.inactive_border" = "$background";
 
       layout = "dwindle";
-      # layout = master
+      # layout = "master";
       # resize_on_border = true
     };
 
     # -----------------------------------------------------
     # Window rules
     # -----------------------------------------------------
+
     windowrule = [
-      
       /* Decoration */
-      "opacity 0.999, class:.*"
-      # TODO:see "forcergbx, title:Picture-in-Picture"
-
+      "match:class .*, opacity 0.999"
+      
       /* Launcher */
-      # noborder, class:ulauncher
-      "stayfocused, class:ulauncher" #i will do this one day...
+      "match:class ulauncher, stay_focused on, border_size 0"
 
-      /* Floating Dialogs/Programs */
-      "float, class:^$,title:^$" # matches empty string class/title
+      /* Floating Dialogs */
+      "match:class ^$, float on"
+      "match:title ^$, float on"
 
-      "float, title:^(Save File)$"
-      "float, title:^(Save As)$"
-      "float, title:^(Open Folder)$"
-      "float, title:^(Open File)$"
+      "match:title ^(Save File)$, float on"
+      "match:title ^(Save As)$, float on"
+      "match:title ^(Open Folder)$, float on"
+      "match:title ^(Open File)$, float on"
 
-      "float, title:^(Picture-in-Picture)$"
-      "size 800 450, title:^(Picture-in-Picture)$"
-      "pin, title:^(Picture-in-Picture)$"
-      
-      "float, class:pavucontrol"
-      "center, class:pavucontrol"  
-      
-      "float, class:.blueman-manager-wrapped"
-      "center, class:.blueman-manager-wrapped"
+      "match:title ^(Picture-in-Picture)$, float on, size 800 450, pin on, opaque on"
 
-      "float, class:nm-connection-editor"
-      "float, class:viewnior"
-      "float, class:org.keepassxc.KeePassXC"  
-      "float, class:org.kde.polkit-kde-authentication-agent-1"
-      "float, class:nwg-look"
-      "float, class:qt5ct"
-      "float, class:org.gnome.SystemMonitor"
+      "match:class pavucontrol, float on, center on"
 
-      /* My stuff */
-      "workspace 2, class:^(obsidian)$"
-      "workspace 6 silent, class:^(vesktop)$"
+      "match:class .blueman-manager-wrapped, float on, center on"
 
-      /* TODO: see
-    
+      "match:class nm-connection-editor, float on"
+      "match:class viewnior, float on"
+      "match:class org.keepassxc.KeePassXC, float on"
+      "match:class org.kde.polkit-kde-authentication-agent-1, float on"
+      "match:class nwg-look, float on"
+      "match:class qt5ct, float on"
+      "match:class org.gnome.SystemMonitor, float on"
+
+      /* Personal preferences */
+      "match:class obsidian, workspace 2"
+      "match:class vesktop, workspace 6 silent"
+            
       # Plasmoids
-      windowrulev2 = noanim, class:org.kde.plasmawindowed
-      windowrulev2 = noinitialfocus, class:org.kde.plasmawindowed
-      windowrulev2 = float, class:org.kde.plasmawindowed
-      windowrulev2 = float, class:org.kde.plasmashell
-      # windowrulev2 = noborder, class:org.kde.plasmawindowed
+      # "match:class org.kde.plasmawindowed, no_anim on, no_initial_focus on, float on, noborder on"
+      # "match:class org.kde.plasmashell, float on"
 
-      */
     ];
-
   };
 
 }

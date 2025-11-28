@@ -29,12 +29,12 @@
     ];
     settings = {
 
-      debug.disable_logs = false;
+      # debug.disable_logs = false;
 
       exec-once = [
 
         # Start Mullvad, then Discord
-        "$scripts/mullvad_toggle.sh && vesktop &"
+        "$scripts/mullvad_toggle.sh && mullvad-exclude vesktop &"
 
         # Clipboard
         "wl-clip-persist --clipboard regular &"

@@ -23,13 +23,13 @@
       };
     };
 
+    
     layerrule = [
-      "blur, waybar"
-      "blur, logout_dialog"
+      "match:class waybar, blur on"
+      "match:class logout_dialog, blur on"
 
-      "blur, swaync-control-center"
-      "blur, swaync-notification-window"
-      "noanim, swaync-control-center"
+      "match:class swaync-control-center, blur on, no_anim on"
+      "match:class swaync-notification-window, blur on"
     ];
 
   };
