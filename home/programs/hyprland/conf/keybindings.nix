@@ -96,37 +96,43 @@
 
 
       # Keyboard actions
-      ## Audio / Microphone
-      " , xf86audioraisevolume, exec, $volume --inc"    # Volume up
-      " , xf86audiolowervolume, exec, $volume --dec"    # Volume down
-      " , xf86audiomute, exec, $volume --toggle"        # Mute audio
-      " , xf86AudioMicMute, exec, $volume --toggle-mic" # Mute mic
+      ## Audio / Microphone / Knob
+      " , XF86AudioRaiseVolume, exec, $volume --inc"    # Volume up
+      " , XF86AudioLowerVolume, exec, $volume --dec"    # Volume down
+      " , XF86AudioMute, exec, $volume --toggle"        # Mute audio
+      " , XF86AudioMicMute, exec, $volume --toggle-mic" # Mute mic
 
       ## Keyboard backlight brightness
-      " , xf86KbdBrightnessDown, exec, $kbacklight --dec" # TODO : Check my key for backlight
-      " , xf86KbdBrightnessUp, exec, $kbacklight --inc"   # Supposed to be kbBrightness++
+      " , XF86KbdBrightnessDown, exec, $kbacklight --dec" # TODO : Check my key for backlight
+      " , XF86KbdBrightnessUp, exec, $kbacklight --inc"   # Supposed to be kbBrightness++
 
       ## Screen brightness
-      " , xf86MonBrightnessUp, exec, $backlight --inc"    # Up
-      " , xf86MonBrightnessDown, exec, $backlight --dec"  # Down
+      " , XF86MonBrightnessUp, exec, $backlight --inc"    # Up
+      " , XF86MonBrightnessDown, exec, $backlight --dec"  # Down
 
       ## Disable touchpad
-      " CTRL SUPER, xf86TouchpadToggle, exec, $touchpad" # Why tf do i need CTRL SUPER here ??
+      " CTRL SUPER, XF86TouchpadToggle, exec, $touchpad" # Why tf do i need CTRL SUPER here ??
 
       ## Sleep button
-      " , xf86Sleep, exec, $lock"
+      " , XF86Sleep, exec, $lock"
 
-      ## Screenshot
-      " , Print, exec, $screenshot"
+      ## Screenshots
+      " , Print, exec, $screenshot" # Desktop: FN + P
 
-      ## Media control (I dont use these)
-      # " , xf86AudioPlayPause, exec, $media --pause"
-      # " , xf86AudioPause, exec, $media --pause"
-      # " , xf86AudioPlay, exec, $media --pause"
-      # " , xf86AudioNext, exec, $media --nxt"
-      # " , xf86AudioPrev, exec, $media --prv"
-      # " , xf86audiostop, exec, $media --stop"
+      ## Desktop FN + Keys
+      # " , XF86Explorer, exec, " # FN + F1
+      # " , XF86Mail, exec, "     # FN + F2
+      # " , XF86Search, exec, "   # FN + F3
+      # " , XF86HomePage, exec, " # FN + F4
 
+      # " , XF86Tools, exec, "    # FN + F5
+      " , XF86AudioPlayPause, exec, $media --pause" # FN + F6
+      " , XF86AudioNext, exec, $media --nxt" # FN + F7
+      " , XF86AudioPrev, exec, $media --prv" # FN + F8
+
+      " , XF86Calculator, exec, $media --pause" # FN + C
+      
+      
 
 
 

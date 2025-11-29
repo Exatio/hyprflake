@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-music_icon="/home/exatio/hyprflake/assets/apps/dunst/icons/music.png"
+music_icon="$HOME/hyprflake/assets/apps/dunst/icons/music.png"
 
 # Play the next track
 play_next() {
