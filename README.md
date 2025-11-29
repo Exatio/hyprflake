@@ -11,7 +11,7 @@ This repo contains my dotfiles for my Hyprland with Matugen setup on my NixOS sy
 
 ## Preview
 
-![desktop](./assets/screenshots/desktop6.png)
+![desktop](./assets/screenshots/preview.png)
 
 ## Setup
 
@@ -24,10 +24,10 @@ This repo contains my dotfiles for my Hyprland with Matugen setup on my NixOS sy
 
 ## Gallery
 
-|                                               |                                                      |
-| :-------------------------------------------: | :--------------------------------------------------: |
-| ![desktop](./assets/screenshots/desktop6.png) | ![desktop](./assets/screenshots/thunar.png)          |
-| ![desktop](./assets/screenshots/tofi_run.png) | ![desktop](./assets/screenshots/tofi_screenshot.png) |
+|                                                   |                                                         |
+| :-----------------------------------------------: | :-----------------------------------------------------: |
+| ![desktop](./assets/screenshots/preview.png)      | ![desktop](./assets/screenshots/preview_2.png)          |
+| ![desktop](./assets/screenshots/preview_drun.png) | ![desktop](./assets/screenshots/preview_screenshot.png) |
 
 
 <details><summary>More Matugen screenshots</summary>
@@ -37,6 +37,8 @@ This repo contains my dotfiles for my Hyprland with Matugen setup on my NixOS sy
 | ![desktop](./assets/screenshots/desktop1.png) | ![desktop](./assets/screenshots/desktop2.png) |
 | ![desktop](./assets/screenshots/desktop3.png) | ![desktop](./assets/screenshots/desktop4.png) |
 | ![desktop](./assets/screenshots/desktop5.png) | ![desktop](./assets/screenshots/desktop6.png) |
+| ![desktop](./assets/screenshots/desktop7.png) | ![desktop](./assets/screenshots/desktop8.png) |
+
 </details>
 
 ## Installation
