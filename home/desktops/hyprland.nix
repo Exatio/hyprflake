@@ -18,7 +18,7 @@
     ../programs/matugen
     ../programs/swaylock
     ../programs/wlogout
-    ../programs/swayidle
+    ../programs/hypridle
 
     ../../scripts/packages.nix
 

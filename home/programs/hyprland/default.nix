@@ -46,7 +46,7 @@
         # Wallpaper
         "swww kill; swww-daemon --format xrgb && $scripts/random_wallpaper.sh &"
 
-        # Prevents swayidle from locking computer when not afk (audio running)
+        # Prevents hypridle from locking computer when not afk (audio running)
         "sway-audio-idle-inhibit &"
 
         # Gamma
