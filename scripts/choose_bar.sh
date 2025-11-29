@@ -5,7 +5,7 @@ bar2="Secondary bar"
 
 if [[ ! $(pidof tofi) ]]; then
     
-    selected=$((echo -e "$def\n$bar2") | tofi -c ~/.config/tofi/config-search)
+    selected=$((echo -e "$def\n$bar2") | tofi --config ~/.config/tofi/config --prompt-text "Choose status bar:" )
 
     if [ -z "$selected" ]; then
         echo "Nothing selected or an error occurred."

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sed '1,/^### DATA ###$/d' $0 | 
-tofi -c ~/.config/tofi/config-search | 
+tofi --config ~/.config/tofi/config --padding-left="5%" --prompt-text "Emoji: " | 
 cut -d ' ' -f 1 | tr -d '\n' | wl-copy
 
 exit
