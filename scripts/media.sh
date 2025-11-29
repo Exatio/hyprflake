@@ -23,7 +23,7 @@ toggle_play_pause() {
 # Stop playback
 stop_playback() {
     playerctl stop
-    dunstify -r 123 -i "$music_icon" "Playback Stopped"
+    dunstify -t 1000 -i "$music_icon" "Playback Stopped"
 }
 
 # Display Dunst notification with song information
@@ -32,9 +32,9 @@ show_music_notification() {
     if [[ "$status" == "Playing" ]]; then
         song_title=$(playerctl metadata title)
         song_artist=$(playerctl metadata artist)
-        dunstify -r 123 -i "$music_icon" "Now Playing:" "$song_title\nby $song_artist"
+        dunstify -t 1000 -i "$music_icon" "Now Playing:" "$song_title\nby $song_artist"
     elif [[ "$status" == "Paused" ]]; then
-        dunstify -r 123 -i "$music_icon" "Playback Paused"
+        dunstify -t 1000 -i "$music_icon" "Playback Paused"
     fi
 }
 
