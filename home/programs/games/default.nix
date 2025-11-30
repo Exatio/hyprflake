@@ -10,5 +10,6 @@
     _2ship2harkinian # zelda mm 
   ] ++ [
   ];
-
+  
+  programs.steam.enable = true;
 }
