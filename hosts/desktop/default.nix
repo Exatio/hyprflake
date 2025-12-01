@@ -68,6 +68,18 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
   
+  # Steam 
+  programs.steam = {
+    enable = true;
+    package = pkgs.steam;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+
+  programs.gamemode.enable = true;
+
+  environment.systemPackages = with pkgs; [mangohud protonup-qt lutris bottles heroic];
+  
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 }

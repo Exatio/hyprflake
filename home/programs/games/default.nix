@@ -11,5 +11,4 @@
   ] ++ [
   ];
   
-  programs.steam.enable = true;
 }

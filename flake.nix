@@ -34,7 +34,7 @@
     #unstable-pkgs = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
     isDesktop = builtins.hasAttr "desktop" self.nixosConfigurations;
   in {
-
+  
     nixosConfigurations = {
 
       laptop = nixpkgs.lib.nixosSystem {
@@ -56,6 +56,7 @@
           }
         ];
         specialArgs = { inherit inputs; };
+        pkgs = pkgs;
       };
 
       desktop = nixpkgs.lib.nixosSystem {
@@ -77,6 +78,7 @@
           }
         ];
         specialArgs = { inherit inputs; };
+        pkgs = pkgs;
       };
 
     };
