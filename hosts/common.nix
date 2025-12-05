@@ -73,8 +73,7 @@
   console.keyMap = "fr";
 
   # Internationalisation
-  i18n = {
-    defaultLocale = "fr_FR.UTF-8";
+  i18n.extraLocaleSettings. = {
     extraLocaleSettings = {
       LC_ADDRESS = "fr_FR.UTF-8";
       LC_IDENTIFICATION = "fr_FR.UTF-8";
