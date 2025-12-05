@@ -22,13 +22,13 @@
       # maybe I should?
     };
 
-  fileSystems."/mnt/SDD1TB" = {
+  fileSystems."/mnt/HDD4TB" = {
     device = "/dev/sda1";
     fsType = "ntfs3";
     options = [ "uid=1000" "gid=100" "dmask=007" "fmask=117" ];
   };
 
-  fileSystems."/mnt/HDD4TB" = {
+  fileSystems."/mnt/SDD1TB" = {
     device = "/dev/sdb1";
     fsType = "ntfs3";
     options = [ "uid=1000" "gid=100" "dmask=007" "fmask=117" ];

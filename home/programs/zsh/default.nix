@@ -45,6 +45,13 @@
       export EDITOR="${pkgs.emacs}/bin/emacsclient -t"
       export VISUAL="${pkgs.emacs}/bin/emacsclient -c -a ${pkgs.emacs}/bin/emacs"
 
+      # Reminder to use ag when running grep
+      grep() {
+        echo "⚠️ Tip: consider using 'ag' (The Silver Searcher) for faster searching."
+        command grep "$@"
+      }
+
+
       eval "$(starship init zsh)"
     '';
 

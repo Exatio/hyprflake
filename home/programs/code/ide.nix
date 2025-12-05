@@ -29,20 +29,22 @@
 
   home.file.".emacs.snippets".source = ./emacs/.emacs.snippets;
   home.file.".emacs.snippets".recursive = true;
+
+  home.file.".emacs.local".source = ./emacs/.emacs.local;
+  home.file.".emacs.local".recursive = true;
   
 
   home.packages = with pkgs; [
     vim
     neovim
     vscodium
-
     silver-searcher
-    clang-tools
   ] ++ (with pkgs.emacsPackages; [
 
   ]) ++ (with pkgs.jetbrains; [
     clion
     pycharm-professional
+    idea-ultimate
   ]);
 
 

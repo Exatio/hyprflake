@@ -8,6 +8,9 @@
 ;;; Load all installed Emacs Lisp packages and activate them
 (package-initialize)
 
+;;; Add to path so emacs can find (simpc-mode)
+(add-to-list 'load-path "~/.emacs.local/")
+
 ;;; Lib
 (load "~/.emacs.rc/rc.el")
 (load "~/.emacs.rc/misc-rc.el")
@@ -35,7 +38,7 @@
 (require 'company)
 
 (global-company-mode) ; disable it for haskell?
-(company-flx-mode 1)
+(company-flx-mode 1)  
 
 ;;; Emacs Completion
 (rc/require 'smex 'ido-completing-read+)
@@ -171,6 +174,8 @@
                          (c-toggle-comment-style -1)))
 
 ;; simpc-mode
+(require 'simpc-mode)
+
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
 (add-to-list 'auto-mode-alist '("\\.[b]\\'" . simpc-mode))
 
