@@ -14,10 +14,6 @@
       # Wake computer with mouse/keyboard press
       mouse_move_enables_dpms = true;
       key_press_enables_dpms = true;
-      # Replace terminal with applications opened with it
-      enable_swallow = true;
-      swallow_regex = "^(kitty)$";
-      swallow_exception_regex = "^(wev)$";
     };
 
     binds = {
