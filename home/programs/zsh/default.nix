@@ -13,6 +13,12 @@
     enableZshIntegration = true;
   };
 
+  programs.nix-your-shell = {
+    enable = true;
+    package = pkgs.nix-your-shell;
+    enableZshIntegration = true;
+  };
+
   # better cat
   programs.bat = {
     enable = true;
