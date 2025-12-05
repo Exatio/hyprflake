@@ -11,7 +11,7 @@ echo "Changing theme..."
 # ----------------------------------------------------- 
 # Set wallpaper & generate conf files with matugen
 # ----------------------------------------------------- 
-matugen image ~/hyprflake/assets/wallpapers/$selected
+matugen image "$HOME/hyprflake/assets/wallpapers/$selected"
 
 # ----------------------------------------------------- 
 # Send notification
