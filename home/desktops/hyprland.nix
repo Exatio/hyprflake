@@ -5,9 +5,7 @@
 
     ## All programs in my Hyprland desktop ##
 
-    ../programs/alacritty
     ../programs/kitty
-
     ../programs/zsh
     ../programs/gtk
     ../programs/waybar

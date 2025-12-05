@@ -3,16 +3,11 @@ command = "swww"
 arguments = ["img", "--transition-type", "grow", "--transition-fps", "60", "--transition-pos", "0.854, 0.977", "--transition-step", "90"]   
 set = true
 
-
-#[templates.alacritty]
-#input_path = '~/hyprflake/home/programs/matugen/templates/alacritty-colors.toml'
-#output_path = '~/.config/alacritty/colors.toml'
-
-#[templates.kitty]
-#input_path = '~/hyprflake/home/programs/matugen/templates/kitty-colors.conf'
-#output_path = '~/.config/kitty/colors.conf'
-#post_hook = 'pkill -SIGUSR1 kitty'
-# #post_hook = "kitty +kitten themes --reload-in=all custom"
+[templates.kitty]
+input_path = '~/hyprflake/home/programs/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+#post_hook = "kitty +kitten themes --reload-in=all custom"
 
 [templates.hyprland]
 input_path = '~/hyprflake/home/programs/matugen/templates/hyprland-colors.conf'
@@ -37,10 +32,6 @@ post_hook = "pkill -USR1 cava"
 [templates.wlogout]
 input_path = '~/hyprflake/home/programs/matugen/templates/colors.css'
 output_path = '~/.config/wlogout/colors.css'
-
-[templates.starship]
-input_path = '~/hyprflake/home/programs/matugen/templates/starship.toml'
-output_path = '~/.config/starship.toml'
 
 [templates.dunst]
 input_path = '~/hyprflake/home/programs/matugen/templates/dunstrc'

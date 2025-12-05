@@ -6,16 +6,20 @@
     pfetch
   ];
 
-  programs.starship = {
+  programs.oh-my-posh = {
     enable = true;
-    package = pkgs.starship;
+    package = pkgs.oh-my-posh;
+    configFile = "~/hyprflake/home/programs/zsh/omp.config.yaml";
+    enableZshIntegration = true;
   };
 
+  # better cat
   programs.bat = {
     enable = true;
     package = pkgs.bat;
   };
 
+  # Smarter cd command
   programs.zoxide = {
     enable = true;
     package = pkgs.zoxide;
@@ -40,7 +44,6 @@
     initContent = lib.mkAfter ''
       pfetch
 
-      export NIX_LD_LIBRARY_PATH="${pkgs.libGL}/lib"
       export ALTERNATE_EDITOR=""
       export EDITOR="${pkgs.emacs}/bin/emacsclient -t"
       export VISUAL="${pkgs.emacs}/bin/emacsclient -c -a ${pkgs.emacs}/bin/emacs"
@@ -50,9 +53,6 @@
         echo "⚠️ Tip: consider using 'ag' (The Silver Searcher) for faster searching."
         command grep "$@"
       }
-
-
-      eval "$(starship init zsh)"
     '';
 
     shellAliases = {

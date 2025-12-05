@@ -1,0 +1,163 @@
+# yaml-language-server: $schema: "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+
+final_space: true
+version: 3
+
+transient_prompt:
+  background: "transparent"
+  foreground: "cyan"
+  newline: true
+  template: "\u276f "
+
+# Diamond base anchor (only shared keys kept)
+diamond_base: &diamond
+  style: "diamond"
+  foreground: "#FFFFFF"
+  background: "#303030"
+  leading_diamond: "\ue0b6"
+  trailing_diamond: "\ue0b4 "
+  
+
+blocks:
+  - type: "prompt"
+    alignment: "left"
+    newline: true
+    segments:
+      - type: "path"
+        template: "<#ffc107>\ue5ff </> {{ .Path }} "
+        style: "plain"
+        foreground: "cyan"
+        properties:
+          style: "mixed"
+          mapped_locations:
+            ~/Documents: "󱧶 "
+            ~/Downloads: "󰉍 "
+            ~/Pictures:  "󰉏 "
+            ~/Music:  "󱍙 "
+            ~/hyprflake: "\ue843 "
+
+        
+      - type: "nix-shell"
+        <<: *diamond
+        template: '{{ if matchP "unknown" .Type }}{{ else }} {{ .Type }}-shell{{ end }}'
+        foreground: "blue"
+
+  - type: "prompt"
+    alignment: "right"
+    segments:
+      - type: "git" # Git Status : TODO: improve
+        template: "<#ffffff>on</> {{ .HEAD }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} "
+        style: "plain"
+        foreground: "foreground"
+        properties:
+          branch_icon: "<b>\ue0a0</b>"
+
+      - type: "project"
+        <<: *diamond
+        template: "{{ if .Error }}{{ .Error }}{{ else }} {{ if .Version }}\uf487 {{.Version}}{{ end }} {{ if .Name }}{{ .Name }}{{ end }}{{ end }}"
+        background: "green"
+
+      - type: "angular"
+        <<: *diamond
+        template: "\ue753 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        foreground: "#1976d2"
+
+      - type: "bazel"
+        <<: *diamond
+        foreground: "#43a047"
+
+      - type: "bun"
+        <<: *diamond
+        foreground: "#43a047"
+
+      - type: "cmake"
+        <<: *diamond
+        template: "\ue794 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        foreground: "#E8EAEE"
+
+      - type: "deno"
+        <<: *diamond
+        template: "\ue7c0 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#3C82F6"
+
+      - type: "docker"
+        <<: *diamond
+        foreground: "#0B59E7"
+
+      - type: "go"
+        <<: *diamond
+        template: "\ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#7FD5EA"
+
+      - type: "haskell"
+        <<: *diamond
+        template: "\ue777 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#100e23"
+
+      - type: "java"
+        <<: *diamond
+        template: "\ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#4063D8"
+
+      - type: "mvn"
+        <<: *diamond
+        template: "\ue82c {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#2E2A65"
+
+      - type: "nim"
+        <<: *diamond
+        template: "\ue841 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#f3d400"
+
+      - type: "node"
+        <<: *diamond
+        template: "\ue718 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#3C873A"
+
+      - type: "npm"
+        <<: *diamond
+        template: "\ue71e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#193549"
+
+      - type: "php"
+        <<: *diamond
+        template: "\ue73d {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#4063D8"
+
+      - type: "python"
+        <<: *diamond
+        template: "<#FFE873> {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}</>{{ .Full }}{{ end }}"
+        foreground: "#306998"
+
+      - type: "react"
+        <<: *diamond
+        template: "\ue7ba {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#81a1c1"
+
+      - type: "svelte"
+        <<: *diamond
+        template: "\ue8b7 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#1976d2"
+
+      - type: "zig"
+        <<: *diamond
+        template: "\ue8ef {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
+        background: "#ffad55"
+
+      - type: "status" # Last command status
+        <<: *diamond
+        template: " \ue23a {{ if gt .Code 0 }}\uf00d {{ reason .Code }}{{ else }}\uf42e{{ end }} "
+        background: "green"
+        background_templates:
+          - "{{ if gt .Code 0 }}red{{ end }}"
+        properties:
+          always_enabled: true
+
+  - type: "prompt"
+    alignment: "left"
+    newline: true
+    segments:
+      - type: "text"
+        template: "\u276f"
+        style: "plain"
+        foreground: "cyan"
