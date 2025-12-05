@@ -1,37 +1,20 @@
 { pkgs, ... }:
 {
-  home = {
+  imports = [
+    ../wofi #temporary, until we remove tofi and wofi
+  ];
 
-    /* TODO: a lot of work here ! Move everything to quickshell
-      -> Wallpaper changer
-      -> App Launcher
-      -> Clipboard history
-      -> Screenshot options
-      -> Wlogout (meh, not sure)
-    */
-
-    packages = [
-      pkgs.tofi
-    ];
-
-    /* still using tofi for clipboard & screenshots. can we move on ? :( */
-
-    file = {
-      ".config/tofi/config".text = ''
-        width = 100%
-        height = 100%
-        border-width = 0
-        outline-width = 0
-        padding-left = 35%
-        padding-top = 35%
-        result-spacing = 25
-        num-results = 10
-        font = monospace
-        background-color = #000A
-      '';
-
-    };
-    
-  };
+  /* TODO: we wanna move to quickshell or ags the following :
+    -> Wallpaper changer
+    -> App Launcher
+    -> Clipboard History
+    -> Screenshots
+    -> Waybar
+    -> + maybe more
+  */
+  home.packages = with pkgs; [
+    quickshell
+    ags
+  ];
 
 }

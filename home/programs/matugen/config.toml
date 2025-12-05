@@ -33,6 +33,10 @@ post_hook = "pkill -USR1 cava"
 input_path = '~/hyprflake/home/programs/matugen/templates/colors.css'
 output_path = '~/.config/wlogout/colors.css'
 
+[templates.wofi]
+input_path = '~/hyprflake/home/programs/matugen/templates/wofi.css'
+output_path = '~/.config/wofi/style.css'
+
 [templates.dunst]
 input_path = '~/hyprflake/home/programs/matugen/templates/dunstrc'
 output_path = '~/.config/dunst/dunstrc_mutable'
