@@ -31,52 +31,36 @@
     system = "x86_64-linux";
     lib = nixpkgs.lib;
     pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-    #unstable-pkgs = import nixpkgs-unstable { inherit system; config.allowUnfree = true; };
     isDesktop = builtins.hasAttr "desktop" self.nixosConfigurations;
+    baseModules = [
+          lanzaboote.nixosModules.lanzaboote
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.exatio = {
+              imports = [
+                ./home/exatio.nix
+              ];
+            };
+            home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };
+          }
+        ];
+
   in {
   
     nixosConfigurations = {
 
       laptop = nixpkgs.lib.nixosSystem {
         inherit system;
-
-        modules = [
-          lanzaboote.nixosModules.lanzaboote
-          ./hosts/laptop
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.exatio = {
-              imports = [
-                ./home/exatio.nix
-              ];
-            };
-            home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };
-          }
-        ];
+        modules = baseModules ++ [ ./hosts/laptop ];
         specialArgs = { inherit inputs; };
         pkgs = pkgs;
       };
 
       desktop = nixpkgs.lib.nixosSystem {
         inherit system;
-
-        modules = [
-          lanzaboote.nixosModules.lanzaboote
-          ./hosts/desktop
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.exatio = {
-              imports = [
-                ./home/exatio.nix
-              ];
-            };
-            home-manager.extraSpecialArgs = { inherit inputs pkgs isDesktop; };
-          }
-        ];
+        modules = baseModules ++ [ ./hosts/desktop ];
         specialArgs = { inherit inputs; };
         pkgs = pkgs;
       };

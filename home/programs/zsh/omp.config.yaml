@@ -30,7 +30,7 @@ blocks:
         properties:
           style: "mixed"
           mapped_locations:
-            ~/Documents: "󱧶 "
+            ~/Documents: "󰲂 "
             ~/Downloads: "󰉍 "
             ~/Pictures:  "󰉏 "
             ~/Music:  "󱍙 "

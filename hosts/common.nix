@@ -3,7 +3,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
   ];
-
+  
   # Nix settings
   nix = {
     settings = {

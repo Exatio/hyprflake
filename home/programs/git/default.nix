@@ -8,28 +8,41 @@
       user.name = "Exatio";
       user.email = "exatio@proton.me";
 
-      aliases = {
+      alias = {
         tree = "log --graph --decorate --pretty=oneline --abbrev-commit --all";
       };
 
-      extraConfig = {
-        
-        init = {
-          defaultBranch = "master";
-        };
-
-        merge = {
-          conflictStyle = "diff3";
-        };
-
+      init = {
+        defaultBranch = "master";
       };
-
+      
+      merge = {
+        conflictStyle = "zdiff3";
+      };
     };
 
     package = pkgs.git;
   };
   
-  programs.delta.enable = true;
-  programs.git-cliff.enable = true;
+  # Syntax highlighting for git (diff, grep, blame)
+  programs.delta = {
+    enable = true;
+    package = pkgs.delta;
+    options = {
+      navigate = true;
+      dark = true;
+      line-numbers = true;
+    };
+    enableGitIntegration = true;
+  };
+
+  # Git Changelog Generator
+  programs.git-cliff = {
+    enable = true;
+    package = pkgs.git-cliff;
+    settings = {
+      # maybe if I use it someday
+    };
+  };
 
 }

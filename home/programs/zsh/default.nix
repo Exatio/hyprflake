@@ -1,11 +1,31 @@
 { pkgs, lib, ... }:
 {
-  home.packages = with pkgs; [
-    fd
-    eza
-    pfetch
+  imports = [
+    ./fastfetch.nix
   ];
 
+  home.packages = with pkgs; [
+    fd
+  ];
+
+  # ls replacement
+  programs.eza = {
+    enable = true;
+    package = pkgs.eza;
+    icons = "always";
+    colors = "always";
+    git = true;
+    extraOptions = [
+      "--all" 
+      "--long"
+      "--header"
+      "--group-directories-first"
+    
+    ];
+    enableZshIntegration = true;
+  };  
+
+  # customizable prompt engine
   programs.oh-my-posh = {
     enable = true;
     package = pkgs.oh-my-posh;
@@ -13,6 +33,18 @@
     enableZshIntegration = true;
   };
 
+  # direnv
+  programs.direnv = {
+    enable = true;
+    package = pkgs.direnv;
+    nix-direnv = {
+      enable = true;
+      package = pkgs.nix-direnv;
+    };
+    enableZshIntegration = true; # might wanna use Mic92/direnv-instant, but it's not useful for me for the moment.
+  };
+
+  # keep zsh inside of nix-shell
   programs.nix-your-shell = {
     enable = true;
     package = pkgs.nix-your-shell;
@@ -48,7 +80,7 @@
     };
 
     initContent = lib.mkAfter ''
-      pfetch
+      fastfetch
 
       export ALTERNATE_EDITOR=""
       export EDITOR="${pkgs.emacs}/bin/emacsclient -t"
@@ -62,10 +94,8 @@
     '';
 
     shellAliases = {
-      c = "clear && pfetch";
+      c = "clear && fastfetch";
       cd = "z";
-      pf = "pfetch";
-      ls = "eza -la";
       cat = "bat";
       shutdown = "systemctl poweroff";
       fonts = "~/hyprflake/scripts/fonts.sh";
