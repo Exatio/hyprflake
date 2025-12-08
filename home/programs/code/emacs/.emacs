@@ -113,7 +113,11 @@
   (toggle-word-wrap 1))
 
 (add-hook 'markdown-mode-hook 'rc/enable-word-wrap)
-z
+
+;;; direnv in emacs
+(rc/require 'direnv)
+(direnv-mode)
+
 ;;; Whitespace mode & remove trailing whitespaces for some modes
 (defun rc/set-up-whitespace-handling ()
   (interactive)
