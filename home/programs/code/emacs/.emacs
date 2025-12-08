@@ -113,7 +113,7 @@
   (toggle-word-wrap 1))
 
 (add-hook 'markdown-mode-hook 'rc/enable-word-wrap)
-
+z
 ;;; Whitespace mode & remove trailing whitespaces for some modes
 (defun rc/set-up-whitespace-handling ()
   (interactive)
