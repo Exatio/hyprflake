@@ -48,7 +48,6 @@
 
       /* Floating Dialogs */
       "match:class ^$, float on"
-      "match:title ^$, float on"
 
       "match:title ^(Save File)$, float on"
       "match:title ^(Save As)$, float on"

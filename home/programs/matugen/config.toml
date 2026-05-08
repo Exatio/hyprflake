@@ -1,7 +1,6 @@
 [config.wallpaper]
-command = "awww"
-arguments = ["img", "--transition-type", "grow", "--transition-fps", "60", "--transition-pos", "0.854, 0.977", "--transition-step", "90"]   
 set = true
+command = "awww img --transition-type grow --transition-fps 60 --transition-pos 0.854, 0.977 --transition-step 90 {{ image }}"
 
 [templates.kitty]
 input_path = '~/hyprflake/home/programs/matugen/templates/kitty-colors.conf'

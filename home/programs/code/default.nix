@@ -39,6 +39,8 @@
     ghidra
     silver-searcher
     github-desktop
+    claude-code
+    claude-monitor
   ] ++ (with pkgs.emacsPackages; [
 
   ]) ++ (with pkgs.jetbrains; [
