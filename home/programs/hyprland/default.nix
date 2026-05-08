@@ -44,7 +44,7 @@
         "$scripts/status_bar.sh &"
 
         # Wallpaper
-        "swww kill; swww-daemon --format xrgb && $scripts/random_wallpaper.sh &"
+        "awww kill; awww-daemon --format xrgb && $scripts/random_wallpaper.sh &"
 
         # Prevents hypridle from locking computer when not afk (audio running)
         "sway-audio-idle-inhibit &"

@@ -30,14 +30,13 @@
     blueman
     eww
     kdePackages.polkit-kde-agent-1
-  ] ++ (with pkgs.xfce; [
     thunar
     thunar-archive-plugin
     thunar-volman
-    exo
+    xfce4-exo
     xfce4-settings
     xfce4-power-manager
-  ]);
+  ];
 
   services.blueman-applet.enable = true;
   services.kdeconnect.enable = true;

@@ -10,7 +10,7 @@
     mpv
     playerctl
     pamixer
-    swww
+    awww
     jq
 
   ];

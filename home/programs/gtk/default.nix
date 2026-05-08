@@ -42,6 +42,7 @@
       "gtk-cursor-theme-name" = "Bibata-Modern-Classic";
     };
 
+   #gtk.theme = config.gtk.theme;
     gtk4.extraConfig = {
       Settings = ''
       gtk-cursor-theme-name=Bibata-Modern-Classic  

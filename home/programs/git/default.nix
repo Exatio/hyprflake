@@ -25,10 +25,14 @@
       merge = {
         conflictStyle = "zdiff3";
       };
-    };
 
+      core.autocrlf = true;
+    };
+    signing.format = "openpgp";
     package = pkgs.git;
   };
+  
+  
   
   # Syntax highlighting for git (diff, grep, blame)
   programs.delta = {

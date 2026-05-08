@@ -126,11 +126,12 @@
       # " , XF86HomePage, exec, " # FN + F4
 
       # " , XF86Tools, exec, "    # FN + F5
+      " , XF86AudioPlay, exec, $media --pause"
       " , XF86AudioPlayPause, exec, $media --pause" # FN + F6
       " , XF86AudioNext, exec, $media --nxt" # FN + F7
       " , XF86AudioPrev, exec, $media --prv" # FN + F8
 
-      " , XF86Calculator, exec, $media --pause" # FN + C
+      #" , XF86Calculator, exec, $calculator" # FN + C
       
       
 
