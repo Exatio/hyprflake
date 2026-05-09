@@ -55,7 +55,7 @@ option5=""
 	    ;;
 		  $option4)
 		options_mon=$(hyprctl monitors | grep '^Monitor ' | awk '{print $2}')
-		choice_mon=$(echo -e "$options_mon" | rofi -dmenu -p "Monitor" -theme ~/.config/rofi/choose.rasi)
+		choice_mon=$(echo -e "$options_mon" | rofi -dmenu -p "Monitor" -i -theme ~/.config/rofi/choose.rasi)
 		if [ -z "$choice_mon" ]; then
       echo "Nothing selected or an error occurred."
       exit 1
