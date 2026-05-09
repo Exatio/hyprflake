@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ../wofi #temporary, until we remove tofi and wofi
+    ../wofi #temporary, until we remove rofi and wofi
   ];
 
   /* TODO: we wanna move to quickshell or ags the following :

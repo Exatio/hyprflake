@@ -7,7 +7,7 @@ input_path = '~/hyprflake/home/programs/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 #post_hook = "kitty +kitten themes --reload-in=all custom"
-aw
+
 [templates.hyprland]
 input_path = '~/hyprflake/home/programs/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'

@@ -37,6 +37,7 @@ in
 
   programs.firefox = {
     enable = true;
+    configPath = ".mozilla/firefox";
     profileVersion = null;
     profiles.default = {
       id = 0;

@@ -3,7 +3,7 @@
 def="Default bar"
 bar2="Secondary bar"
 
-if [[ ! $(pidof tofi) ]]; then
+if [[ ! $(pidof rofi) ]]; then
     
     selected=$( (echo -e "$def\n$bar2") | rofi -dmenu -theme ~/.config/rofi/choose.rasi -p "Choose status bar:" )
 
@@ -18,5 +18,5 @@ if [[ ! $(pidof tofi) ]]; then
         ~/hyprflake/scripts/status_bar.sh bar2 &
     fi
 else
-	pkill tofi
+	pkill rofi
 fi

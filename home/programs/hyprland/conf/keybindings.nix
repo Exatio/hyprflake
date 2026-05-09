@@ -24,7 +24,7 @@
     "$clipboard" =   "$scripts/clipboard.sh";
     "$brightness" =  "$scripts/screen_brightness.sh";
     "$appLauncher" = "rofi -show drun -theme ~/.config/rofi/launcher.rasi";
-    "$emojis" =      "rofi -modi emoji -show emoji -p \"😸\" -theme ~/.config/rofi/emoji-picker.rasi";
+    "$emojis" =      "rofi -modi emoji -show emoji -p \"😸\" -theme ~/.config/rofi/choose.rasi";
     "$rWallpaper" =  "$scripts/random_wallpaper.sh";
     "$wallpaper" =   "$scripts/wallpaper.sh";
     "$screenshot" =  "$scripts/screenshot.sh";

@@ -27,6 +27,7 @@
     };
   };
 
+  # VPN settings > enable local content sharing for KDE Connect
   services.mullvad-vpn = {
     enable = true;
     package = pkgs.mullvad-vpn;

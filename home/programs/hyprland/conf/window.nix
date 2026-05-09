@@ -49,7 +49,7 @@
       /* Floating Dialogs */
       "match:class ^$, float on"
 
-      "match:class ^(jetbrains-.*)$ match:float on, stay_focused on"
+      "match:class ^(jetbrains-.*)$, match:float true, stay_focused on"
 
       "match:title ^(Save File)$, float on"
       "match:title ^(Save As)$, float on"

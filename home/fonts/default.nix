@@ -13,6 +13,8 @@
     font-awesome_4
     font-awesome_5
 
+    icomoon-feather # TO COPY PASTE nix-shell -p font-manager
+
     # Watch for the patched fonts table in order to add more
     # https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
     # "IBMPlexMono" - will be "BlexMono Nerd Font"

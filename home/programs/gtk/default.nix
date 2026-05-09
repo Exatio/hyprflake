@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, config, ...}:
 {
   home.pointerCursor = {
     gtk.enable = true;
@@ -42,7 +42,8 @@
       "gtk-cursor-theme-name" = "Bibata-Modern-Classic";
     };
 
-   #gtk.theme = config.gtk.theme;
+    gtk4.theme = config.gtk.theme;
+
     gtk4.extraConfig = {
       Settings = ''
       gtk-cursor-theme-name=Bibata-Modern-Classic  

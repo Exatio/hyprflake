@@ -1,19 +1,16 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ *
+ * Colors
+ **/
+
 * {
-    selected-text:	#adc6ff;
-    selected-background: #2b4678;
-
-    prompt-text: #bfc6dc;
-    prompt-background: #3f4759;
-
-    normal-text: #2b4678;
-    normal-background: #8e90990d;
-
-    window-border: #debcdf;
-    window-background: #8e90990D;
-
-    scrollbar-filled: #293041;
-    scrollbar-empty: #dbe2f9;
-
-    error-message: #ffb4ab;
-    error-message-border: #690005;
+    background:     #1E2127FF;
+    background-alt: #282B31FF;
+    foreground:     #FFFFFFFF;
+    selected:       #61AFEFFF;
+    active:         #98C379FF;
+    urgent:         #E06C75FF;
 }

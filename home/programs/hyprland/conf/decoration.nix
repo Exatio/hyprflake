@@ -30,6 +30,10 @@
 
       "match:class swaync-control-center, blur on, no_anim on"
       "match:class swaync-notification-window, blur on"
+
+      "match:namespace selection, blur off"
+      "match:namespace rofi, ignore_alpha 0.1"
+      #"match:title kitty, no_screen_share on" it does to the whole layer !!!
     ];
 
   };
