@@ -1,13 +1,13 @@
 [config.wallpaper]
 set = true
-command = "awww img --transition-type grow --transition-fps 60 --transition-pos 0.854, 0.977 --transition-step 90 {{ image }}"
+command = "awww img --transition-type grow --transition-fps 60 --transition-pos \"854, 977\" --transition-step 90 {{ image }}"
 
 [templates.kitty]
 input_path = '~/hyprflake/home/programs/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
 post_hook = 'pkill -SIGUSR1 kitty'
 #post_hook = "kitty +kitten themes --reload-in=all custom"
-
+aw
 [templates.hyprland]
 input_path = '~/hyprflake/home/programs/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'

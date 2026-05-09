@@ -56,7 +56,7 @@ selected="$wallpapers/$name"
 # Set wallpaper & generate conf files with matugen
 # ----------------------------------------------------- 
 echo "Changing theme..."
-matugen image "$selected"
+matugen image --source-color-index 0 "$selected"
 
 # ----------------------------------------------------- 
 # Send notification

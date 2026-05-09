@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-if [[ ! $(pidof tofi) ]]; then
-    selected=$((echo -e "Clear history\n" & cliphist list) | tofi --config ~/.config/tofi/config --padding-left="5%" --prompt-text "Clipboard: " )
-    
+if [[ ! $(pidof rofi) ]]; then
+    selected=$( (echo -e "Clear history\n" & cliphist list) | rofi -dmenu -p "📋" -theme ~/.config/rofi/choose.rasi )
+
     if [ -z "$selected" ]; then
         echo "Nothing selected or an error occurred."
         exit 1

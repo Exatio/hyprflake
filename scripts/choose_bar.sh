@@ -5,7 +5,7 @@ bar2="Secondary bar"
 
 if [[ ! $(pidof tofi) ]]; then
     
-    selected=$((echo -e "$def\n$bar2") | tofi --config ~/.config/tofi/config --prompt-text "Choose status bar:" )
+    selected=$( (echo -e "$def\n$bar2") | rofi -dmenu -theme ~/.config/rofi/choose.rasi -p "Choose status bar:" )
 
     if [ -z "$selected" ]; then
         echo "Nothing selected or an error occurred."

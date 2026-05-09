@@ -23,12 +23,12 @@
     "$lidSwitch" =   "$scripts/lid_switch.sh";
     "$clipboard" =   "$scripts/clipboard.sh";
     "$brightness" =  "$scripts/screen_brightness.sh";
-    "$appLauncher" = "tofi-drun --drun-launch=true";
-    "$screenshot" =  "$scripts/screenshot.sh";
+    "$appLauncher" = "rofi -show drun -theme ~/.config/rofi/launcher.rasi";
+    "$emojis" =      "rofi -modi emoji -show emoji -p \"😸\" -theme ~/.config/rofi/emoji-picker.rasi";
     "$rWallpaper" =  "$scripts/random_wallpaper.sh";
     "$wallpaper" =   "$scripts/wallpaper.sh";
+    "$screenshot" =  "$scripts/screenshot.sh";
     "$powerMenu" =   "$scripts/power_menu.sh";
-    "$emojis" =      "$scripts/emojis.sh";
     "$bar" =         "$scripts/choose_bar.sh";
 
     # AZERTY keyboards

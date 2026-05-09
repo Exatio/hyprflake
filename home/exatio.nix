@@ -29,6 +29,7 @@
       })
       */
       vesktop
+      vencord
 
       # Other
       keepassxc # password manager

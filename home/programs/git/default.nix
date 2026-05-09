@@ -26,7 +26,7 @@
         conflictStyle = "zdiff3";
       };
 
-      core.autocrlf = true;
+      core.autocrlf = "input";
     };
     signing.format = "openpgp";
     package = pkgs.git;

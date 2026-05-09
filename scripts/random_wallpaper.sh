@@ -9,7 +9,7 @@ wallpaper_dir="$HOME/hyprflake/assets/wallpapers"
 selected=$(find "$wallpaper_dir" -type f | shuf -n 1)
 
 # Generate color scheme and set wallpaper
-matugen image "$selected"
+matugen image --source-color-index 0 "$selected"
 
 # ----------------------------------------------------- 
 # Get wallpaper image name (filename only)
