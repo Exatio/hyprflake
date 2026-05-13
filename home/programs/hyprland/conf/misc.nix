@@ -4,10 +4,6 @@
 {
 
   wayland.windowManager.hyprland.settings = {
-    
-    cursor = {
-      no_warps = true;
-    };
 
     misc = {
       # Disable default Hyprland background

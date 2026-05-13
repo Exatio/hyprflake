@@ -185,7 +185,7 @@
 	    "format": "{} °",
 	    "tooltip": true,
 	    "interval": 3600,
-	    "exec": "wttrbar --location Paris --lang fr",
+	    "exec": "wttrbar --location Paris",
 	    "return-type": "json"
 	}
 }

@@ -23,6 +23,7 @@
     "$lidSwitch" =   "$scripts/lid_switch.sh";
     "$clipboard" =   "$scripts/clipboard.sh";
     "$brightness" =  "$scripts/screen_brightness.sh";
+    "$empty" =       "$scripts/switch_monitors_to_empty.sh";
     "$appLauncher" = "rofi -show drun -theme ~/.config/rofi/launcher.rasi";
     "$emojis" =      "rofi -modi emoji -show emoji -p \"😸\" -theme ~/.config/rofi/choose.rasi";
     "$rWallpaper" =  "$scripts/random_wallpaper.sh";
@@ -81,6 +82,9 @@
       ## Wallpapers
       "$mainMod SHIFT, W, exec, $rWallpaper"
       "$mainMod CTRL, W, exec, $wallpaper"
+
+      ## Switch all monitors to empty workspaces to showcase wallpapers
+      "$mainMod CTRL SHIFT, W, exec, $empty"
 
       ## Choose status bar
       "$mainMod CTRL, X, exec, $bar"

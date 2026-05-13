@@ -11,7 +11,7 @@
       kb_model = "";
       kb_options = "grp:alt_shift_toggle";
       kb_rules = "";
-      follow_mouse = 1;
+      follow_mouse = 0; # stop focusing other window only by hovering them. now click to focus.
       repeat_rate = 50;
       repeat_delay = 300;
       touchpad = {
